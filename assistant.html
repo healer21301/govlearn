@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#173b73"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="icon"
+        href="icon-192.png"
+    >
+
+    <title>
+        Study Assistant | GovLearn
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="main-header">
+
+        <div class="container nav-container">
+
+
+            <div class="logo">
+
+                <span class="logo-icon">
+                    ⚖️
+                </span>
+
+                <div>
+
+                    <h2>
+                        GovLearn
+                    </h2>
+
+                    <small>
+                        Philippine Governance Learning Hub
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#topics">
+                    Topics
+                </a>
+
+                <a href="index.html#assessments">
+                    Assessments
+                </a>
+
+                <a href="progress.html">
+                    Progress
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         STUDY ASSISTANT
+    ====================================================== -->
+
+    <main class="assistant-page">
+
+        <div class="container">
+
+
+            <!-- PAGE HEADER -->
+
+            <section class="assistant-page-header">
+
+                <span class="section-label">
+                    Guided Review
+                </span>
+
+                <h1>
+                    Study Assistant
+                </h1>
+
+                <p>
+
+                    Ask questions about the Politics and
+                    Governance lessons and receive explanations
+                    based on GovLearn's curated review content.
+
+                </p>
+
+                <div class="assistant-system-note">
+
+                    📘 Uses curated lesson content and saved
+                    learning progress. It does not depend on
+                    live internet answers.
+
+                </div>
+
+            </section>
+
+
+
+            <!-- PERSONALIZED RECOMMENDATION -->
+
+            <section
+                class="assistant-recommendation"
+                id="assistantRecommendation"
+            >
+
+                <div class="assistant-recommendation-icon">
+                    🎯
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Personalized Recommendation
+                    </span>
+
+                    <h2 id="recommendationTitle">
+                        Complete a practice activity
+                    </h2>
+
+                    <p id="recommendationText">
+
+                        After completing quizzes, GovLearn can
+                        recommend which topic you should review
+                        first.
+
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="index.html#topics"
+                    class="secondary-btn"
+                    id="recommendationLink"
+                >
+                    Start Reviewing
+                </a>
+
+            </section>
+
+
+
+            <!-- MAIN ASSISTANT GRID -->
+
+            <section class="assistant-layout">
+
+
+                <!-- =================================================
+                     LEFT SIDEBAR
+                ================================================== -->
+
+                <aside class="assistant-sidebar">
+
+
+                    <div class="assistant-sidebar-card">
+
+                        <h3>
+                            Review by Topic
+                        </h3>
+
+                        <div
+                            class="assistant-topic-buttons"
+                            id="assistantTopicButtons"
+                        >
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="assistant-sidebar-card">
+
+                        <h3>
+                            Quick Questions
+                        </h3>
+
+                        <div
+                            class="assistant-quick-list"
+                            id="assistantQuickQuestions"
+                        >
+                        </div>
+
+                    </div>
+
+
+                </aside>
+
+
+
+                <!-- =================================================
+                     CHAT PANEL
+                ================================================== -->
+
+                <div class="assistant-chat-panel">
+
+
+                    <!-- CHAT HEADER -->
+
+                    <div class="assistant-chat-header">
+
+                        <div class="assistant-avatar">
+                            📘
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                GovLearn Study Assistant
+                            </strong>
+
+                            <span>
+                                Politics and Governance Reviewer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MESSAGES -->
+
+                    <div
+                        class="assistant-messages"
+                        id="assistantMessages"
+                    >
+                    </div>
+
+
+
+                    <!-- INPUT -->
+
+                    <div class="assistant-input-area">
+
+
+                        <textarea
+                            id="assistantInput"
+                            rows="2"
+                            maxlength="180"
+                            placeholder="Ask about a lesson concept..."
+                        ></textarea>
+
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            id="assistantAskButton"
+                        >
+                            Ask
+                        </button>
+
+
+                    </div>
+
+
+                    <div class="assistant-input-help">
+
+                        Try:
+                        “What is governance?”,
+                        “Explain agenda-setting power”,
+                        or
+                        “Difference between nation and state.”
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                Philippine Governance Learning Hub
+            </p>
+
+            <small>
+                TOS-Based Learning and Review Website
+            </small>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         SCRIPTS
+
+         ORDER IS IMPORTANT
+    ====================================================== -->
+
+    <script src="json.js"></script>
+
+    <script src="progress.js"></script>
+
+    <script src="assistant-data.js"></script>
+
+    <script src="assistant.js"></script>
+
+    <script src="pwa.js"></script>
+
+    <script src="site-ui.js"></script>
+
+
+</body>
+
+</html>

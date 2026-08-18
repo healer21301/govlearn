@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#173b73"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="icon"
+        href="icon-192.png"
+    >
+
+    <title>
+        Practice Quiz | GovLearn
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="main-header">
+
+        <div class="container nav-container">
+
+
+            <div class="logo">
+
+                <span class="logo-icon">
+                    ⚖️
+                </span>
+
+                <div>
+
+                    <h2>
+                        GovLearn
+                    </h2>
+
+                    <small>
+                        Philippine Governance Learning Hub
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#topics">
+                    Topics
+                </a>
+
+                <a href="index.html#assessments">
+                    Assessments
+                </a>
+
+                <a href="progress.html">Progress</a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         QUIZ PAGE
+    ====================================================== -->
+
+    <main class="quiz-page">
+
+        <div class="container quiz-container">
+
+
+            <!-- =================================================
+                 QUIZ HEADER
+            ================================================== -->
+
+            <section class="quiz-header-card">
+
+                <a
+                    href="#"
+                    class="back-link"
+                    id="backToTopic"
+                >
+                    ← Back to Lesson
+                </a>
+
+
+                <span class="section-label">
+                    Practice Quiz
+                </span>
+
+
+                <h1 id="quizTopicTitle">
+                    Loading Quiz...
+                </h1>
+
+
+                <p>
+                    Select the best answer for each question.
+                    Complete all items to view your result.
+                </p>
+
+
+                <p
+                    class="quiz-tos-info"
+                    id="quizTosInfo"
+                >
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACTIVE QUIZ
+            ================================================== -->
+
+            <section
+                class="quiz-card"
+                id="quizCard"
+            >
+
+
+                <!-- PROGRESS INFORMATION -->
+
+                <div class="quiz-progress-top">
+
+                    <span id="questionCounter">
+                        Question 1 of 5
+                    </span>
+
+                    <span id="answeredCounter">
+                        0 Answered
+                    </span>
+
+                </div>
+
+
+                <div class="quiz-progress-bar">
+
+                    <div
+                        class="quiz-progress-fill"
+                        id="quizProgressFill"
+                    >
+                    </div>
+
+                </div>
+
+
+
+                <!-- COGNITIVE LEVEL -->
+
+                <div class="question-meta">
+
+                    <span
+                        class="question-level"
+                        id="questionLevel"
+                    >
+                        Remembering
+                    </span>
+
+                </div>
+
+
+
+                <!-- QUESTION -->
+
+                <h2
+                    class="quiz-question"
+                    id="questionText"
+                >
+                    Loading question...
+                </h2>
+
+
+
+                <!-- ANSWER OPTIONS -->
+
+                <div
+                    class="answer-options"
+                    id="answerOptions"
+                >
+                </div>
+
+
+
+                <!-- CONTROLS -->
+
+                <div class="quiz-controls">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="previousQuestionButton"
+                    >
+                        Previous
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="nextQuestionButton"
+                    >
+                        Next Question
+                    </button>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RESULT SECTION
+            ================================================== -->
+
+            <section
+                class="quiz-result-card hidden"
+                id="quizResultCard"
+            >
+
+
+                <div class="result-icon">
+                    🎉
+                </div>
+
+
+                <span class="section-label">
+                    Quiz Completed
+                </span>
+
+
+                <h2>
+                    Your Result
+                </h2>
+
+
+
+                <div class="score-display">
+
+                    <strong id="finalScore">
+                        0/0
+                    </strong>
+
+                    <span id="finalPercentage">
+                        0%
+                    </span>
+
+                </div>
+
+
+
+                <p
+                    class="result-message"
+                    id="resultMessage"
+                >
+                </p>
+
+
+
+                <div class="result-summary">
+
+
+                    <div class="result-summary-item">
+
+                        <span>
+                            Correct
+                        </span>
+
+                        <strong id="correctAnswers">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-summary-item">
+
+                        <span>
+                            Incorrect
+                        </span>
+
+                        <strong id="incorrectAnswers">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-summary-item">
+
+                        <span>
+                            Total Items
+                        </span>
+
+                        <strong id="totalQuestions">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="result-actions">
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="reviewAnswersButton"
+                    >
+                        Review My Answers
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="retryQuizButton"
+                    >
+                        Try Again
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="returnLessonButton"
+                    >
+                        Return to Lesson
+                    </button>
+
+
+                </div>
+
+
+                <p class="result-note">
+
+                    Review your answers to understand your
+                    mistakes and identify concepts that need
+                    more practice.
+
+                </p>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ANSWER REVIEW SECTION
+
+                 IMPORTANT:
+                 THIS MUST HAVE THE "hidden" CLASS.
+            ================================================== -->
+
+            <section
+                class="answer-review-section hidden"
+                id="answerReviewSection"
+            >
+
+
+                <!-- REVIEW HEADER -->
+
+                <div class="review-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            Answer Review
+                        </span>
+
+                        <h2>
+                            Review Your Answers
+                        </h2>
+
+                        <p>
+                            Check each item and study the
+                            explanation before taking another
+                            practice quiz.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="backToResultButton"
+                    >
+                        ← Back to Result
+                    </button>
+
+                </div>
+
+
+
+                <!-- REVIEW SUMMARY -->
+
+                <div class="review-summary-card">
+
+
+                    <div class="review-summary-item">
+
+                        <span>
+                            Topic
+                        </span>
+
+                        <strong id="reviewTopicName">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="review-summary-item">
+
+                        <span>
+                            Score
+                        </span>
+
+                        <strong id="reviewScore">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="review-summary-item">
+
+                        <span>
+                            Accuracy
+                        </span>
+
+                        <strong id="reviewAccuracy">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- QUESTION REVIEWS -->
+
+                <div
+                    class="answer-review-list"
+                    id="answerReviewList"
+                >
+                </div>
+
+
+
+                <!-- REVIEW ACTIONS -->
+
+                <div class="review-bottom-actions">
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="reviewRetryButton"
+                    >
+                        Practice Again
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="reviewReturnLessonButton"
+                    >
+                        Return to Lesson
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                Philippine Governance Learning Hub
+            </p>
+
+            <small>
+                TOS-Based Learning and Review Website
+            </small>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+
+         ORDER IS IMPORTANT
+    ====================================================== -->
+
+    <script src="json.js"></script>
+
+    <script src="tos-config.js"></script>
+    
+    <script src="progress.js"></script>
+    
+    <script src="quiz.js"></script>
+
+    <script src="pwa.js"></script>
+
+    <script src="site-ui.js"></script>
+
+
+</body>
+
+</html>

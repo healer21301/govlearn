@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#173b73"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="icon"
+        href="icon-192.png"
+    >
+
+    <title>Learning Topic | GovLearn</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+
+        <div class="container nav-container">
+
+            <div class="logo">
+                <span class="logo-icon">⚖️</span>
+
+                <div>
+                    <h2>GovLearn</h2>
+                    <small>Philippine Governance Learning Hub</small>
+                </div>
+            </div>
+
+            <nav>
+
+                <a href="index.html">Home</a>
+
+                <a href="index.html#topics">
+                    Topics
+                </a>
+
+                <a href="progress.html">Progress</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- TOPIC HERO -->
+    <section class="topic-hero">
+
+        <div class="container">
+
+            <a
+                href="index.html#topics"
+                class="back-link"
+            >
+                ← Back to Topics
+            </a>
+
+
+            <div class="topic-hero-content">
+
+                <span
+                    class="section-label"
+                    id="topicNumber"
+                >
+                    Topic
+                </span>
+
+                <h1 id="topicTitle">
+                    Loading Topic...
+                </h1>
+
+                <p id="topicCompetency">
+                    Loading competency...
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TOPIC INFORMATION -->
+    <section class="topic-learning-section">
+
+        <div class="container topic-page-grid">
+
+
+            <!-- MAIN CONTENT -->
+            <main class="lesson-content">
+
+
+                <!-- LEARNING OBJECTIVE -->
+                <div class="learning-box">
+
+                    <span class="content-label">
+                        Learning Competency
+                    </span>
+
+                    <h2>
+                        What should you learn?
+                    </h2>
+
+                    <p id="learningCompetency">
+                        Loading...
+                    </p>
+
+                </div>
+
+
+                <!-- LESSON INTRODUCTION -->
+                <div class="lesson-block">
+
+                    <div class="lesson-icon">
+                        📖
+                    </div>
+
+                    <div>
+
+                        <span class="content-label">
+                            Lesson
+                        </span>
+
+                        <h2 id="lessonTitle">
+                            Topic Overview
+                        </h2>
+
+                        <p id="lessonIntroduction">
+                            Your learning material for this topic
+                            will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+               <!-- IMPORTANT CONCEPTS -->
+<div class="lesson-block">
+
+    <div class="lesson-icon">
+        💡
+    </div>
+
+    <div class="full-width">
+
+        <span class="content-label">
+            Key Concepts
+        </span>
+
+        <h2>
+            Important Concepts to Understand
+        </h2>
+
+        <div
+            class="concept-list"
+            id="conceptList"
+        >
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ANALYSIS SECTION -->
+<div class="lesson-block analysis-lesson">
+
+    <div class="lesson-icon">
+        🧠
+    </div>
+
+    <div class="full-width">
+
+        <span class="content-label">
+            Analyze
+        </span>
+
+        <h2 id="scenarioTitle">
+            Analyze This Situation
+        </h2>
+
+        <div class="scenario-box">
+
+            <p
+                class="scenario-text"
+                id="scenarioText"
+            >
+            </p>
+
+            <h4>
+                Question
+            </h4>
+
+            <p id="scenarioQuestion">
+            </p>
+
+            <div class="guide-box">
+
+                <strong>
+                    Guide:
+                </strong>
+
+                <span id="scenarioGuide">
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- KEY TAKEAWAYS -->
+<div class="lesson-block">
+
+    <div class="lesson-icon">
+        ✅
+    </div>
+
+    <div class="full-width">
+
+        <span class="content-label">
+            Quick Review
+        </span>
+
+        <h2>
+            Key Takeaways
+        </h2>
+
+        <ul
+            class="takeaway-list"
+            id="takeawayList"
+        >
+        </ul>
+
+    </div>
+
+</div>
+
+                <!-- LEARNING ACTIONS -->
+                <div class="learning-actions">
+
+                    <button
+                        class="primary-btn"
+                        id="practiceTopicButton"
+                    >
+                        Practice This Topic
+                    </button>
+
+
+                    <button
+                        class="secondary-btn"
+                        id="assistantTopicButton"
+                    >
+                        Ask Study Assistant
+                    </button>
+
+                </div>
+
+
+            </main>
+
+
+            <!-- SIDEBAR -->
+            <aside class="topic-sidebar">
+
+
+                <div class="sidebar-card">
+
+                    <h3>
+                        Topic Information
+                    </h3>
+
+
+                    <div class="topic-stat">
+
+                        <span>
+                            TOS Items
+                        </span>
+
+                        <strong id="topicItems">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="topic-stat">
+
+                        <span>
+                            Cognitive Levels
+                        </span>
+
+                        <div
+                            class="cognitive-badges"
+                            id="cognitiveLevels"
+                        >
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sidebar-card">
+
+                    <h3>
+                        Learning Path
+                    </h3>
+
+
+                    <div class="learning-path-item active">
+
+                        <span>
+                            1
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Learn
+                            </strong>
+
+                            <small>
+                                Review the lesson
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="learning-path-item">
+
+                        <span>
+                            2
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Practice
+                            </strong>
+
+                            <small>
+                                Answer topic questions
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="learning-path-item">
+
+                        <span>
+                            3
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Review
+                            </strong>
+
+                            <small>
+                                Check your mistakes
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="learning-path-item">
+
+                        <span>
+                            4
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Improve
+                            </strong>
+
+                            <small>
+                                Practice weak concepts
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container">
+
+            <p>
+                Philippine Governance Learning Hub
+            </p>
+
+            <small>
+                TOS-Based Learning and Review Website
+            </small>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="json.js"></script>
+
+    <script src="topic.js"></script>
+
+    <script src="pwa.js"></script>
+
+    <script src="site-ui.js"></script>
+
+</body>
+</html>

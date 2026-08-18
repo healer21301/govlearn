@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#173b73"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="icon"
+        href="icon-192.png"
+    >
+
+    <title>
+        My Progress | GovLearn
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="main-header">
+
+        <div class="container nav-container">
+
+
+            <div class="logo">
+
+                <span class="logo-icon">
+                    ⚖️
+                </span>
+
+                <div>
+
+                    <h2>
+                        GovLearn
+                    </h2>
+
+                    <small>
+                        Philippine Governance Learning Hub
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#topics">
+                    Topics
+                </a>
+
+                <a href="index.html#assessments">
+                    Assessments
+                </a>
+
+                <a href="progress.html">
+                    Progress
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PROGRESS PAGE
+    ====================================================== -->
+
+    <main class="progress-page">
+
+        <div class="container">
+
+
+            <!-- PAGE HEADER -->
+
+            <section class="progress-page-header">
+
+                <span class="section-label">
+                    Learning Progress
+                </span>
+
+                <h1>
+                    My Progress
+                </h1>
+
+                <p>
+                    Track your scores, improvement,
+                    and performance across your
+                    learning activities.
+                </p>
+
+            </section>
+
+
+
+            <!-- EMPTY STATE -->
+
+            <section
+                class="progress-empty-card hidden"
+                id="progressEmptyState"
+            >
+
+                <div>
+                    📊
+                </div>
+
+                <h2>
+                    No Learning Activity Yet
+                </h2>
+
+                <p>
+                    Complete a Practice Quiz or Timed
+                    Challenge to begin tracking your progress.
+                </p>
+
+                <a
+                    href="index.html#topics"
+                    class="primary-btn"
+                >
+                    Start Learning
+                </a>
+
+            </section>
+
+
+
+            <!-- PROGRESS CONTENT -->
+
+            <div
+                id="progressContent"
+                class="hidden"
+            >
+
+
+                <!-- OVERALL STATISTICS -->
+
+                <section class="progress-stat-grid">
+
+
+                    <article class="progress-stat-card">
+
+                        <span>
+                            Overall Average
+                        </span>
+
+                        <strong id="overallAverage">
+                            0%
+                        </strong>
+
+                        <small>
+                            Across saved activities
+                        </small>
+
+                    </article>
+
+
+                    <article class="progress-stat-card">
+
+                        <span>
+                            Best Performance
+                        </span>
+
+                        <strong id="bestPerformance">
+                            0%
+                        </strong>
+
+                        <small>
+                            Highest recorded score
+                        </small>
+
+                    </article>
+
+
+                    <article class="progress-stat-card">
+
+                        <span>
+                            Practice Sessions
+                        </span>
+
+                        <strong id="practiceSessions">
+                            0
+                        </strong>
+
+                        <small>
+                            Topic practice attempts
+                        </small>
+
+                    </article>
+
+
+                    <article class="progress-stat-card">
+
+                        <span>
+                            Timed Challenges
+                        </span>
+
+                        <strong id="challengeSessions">
+                            0
+                        </strong>
+
+                        <small>
+                            Timed attempts
+                        </small>
+
+                    </article>
+
+
+                </section>
+
+                <!-- =====================================================
+     LEARNING ANALYSIS
+====================================================== -->
+
+<section
+class="progress-panel"
+id="learningAnalysisPanel"
+>
+
+<div class="progress-panel-header">
+
+    <div>
+
+        <span class="section-label">
+            Learning Analysis
+        </span>
+
+        <h2>
+            Areas to Focus On
+        </h2>
+
+        <p class="analysis-description">
+            GovLearn analyzes your saved answers
+            to identify topics and thinking skills
+            that may need additional practice.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- MAIN ANALYSIS CARDS -->
+
+<div class="learning-analysis-grid">
+
+
+    <!-- WEAKEST TOPIC -->
+
+    <article class="analysis-card focus-analysis-card">
+
+        <span class="analysis-card-label">
+            🎯 Priority Focus
+        </span>
+
+        <h3 id="weakestTopicName">
+            Not enough data yet
+        </h3>
+
+        <strong
+            class="analysis-percentage"
+            id="weakestTopicAccuracy"
+        >
+            —
+        </strong>
+
+        <p id="weakestTopicMessage">
+            Complete more practiceReview topics where you need
+        additional practice. activities
+            to identify your priority topic.
+        </p>
+
+        <a
+            href="index.html#topics"
+            class="primary-btn analysis-action"
+            id="weakestTopicLink"
+        >
+            Review Topic
+        </a>
+
+        <a
+            href="focus.html"
+            class="secondary-btn analysis-action focus-practice-link"
+        >
+            Start Focus Practice
+        </a>
+
+        <a
+            href="assistant.html"
+            class="secondary-btn analysis-action focus-practice-link"
+            id="priorityAssistantLink"
+        >
+            Ask Study Assistant
+        </a>
+
+    </article>
+
+
+
+    <!-- WEAKEST COGNITIVE LEVEL -->
+
+    <article class="analysis-card">
+
+        <span class="analysis-card-label">
+            🧠 Skill to Improve
+        </span>
+
+        <h3 id="weakestCognitiveName">
+            Not enough data yet
+        </h3>
+
+        <strong
+            class="analysis-percentage"
+            id="weakestCognitiveAccuracy"
+        >
+            —
+        </strong>
+
+        <p id="weakestCognitiveMessage">
+            Answer more questions so GovLearn
+            can analyze your cognitive performance.
+        </p>
+
+    </article>
+
+
+
+    <!-- STRONGEST AREA -->
+
+    <article class="analysis-card strong-analysis-card">
+
+        <span class="analysis-card-label">
+            ⭐ Strongest Topic
+        </span>
+
+        <h3 id="strongestTopicName">
+            Not enough data yet
+        </h3>
+
+        <strong
+            class="analysis-percentage"
+            id="strongestTopicAccuracy"
+        >
+            —
+        </strong>
+
+        <p id="strongestTopicMessage">
+            Your strongest topic will appear
+            after completing learning activities.
+        </p>
+
+    </article>
+
+
+</div>
+
+
+<!-- DETAILED COGNITIVE PERFORMANCE -->
+
+<div class="cognitive-analysis-section">
+
+    <h3>
+        Cognitive-Level Performance
+    </h3>
+
+
+    <div
+        class="cognitive-analysis-grid"
+        id="cognitiveAnalysisGrid"
+    >
+    </div>
+
+</div>
+
+
+<!-- WEAK TOPICS -->
+
+<div
+    class="weak-topic-section"
+    id="weakTopicSection"
+>
+
+    <h3>
+        Topics Recommended for Review
+    </h3>
+
+    <div
+        class="weak-topic-list"
+        id="weakTopicList"
+    >
+    </div>
+
+</div>
+
+
+<p
+    class="analysis-data-note"
+    id="analysisDataNote"
+>
+</p>
+
+</section>
+
+                <!-- TOPIC PERFORMANCE -->
+
+                <section class="progress-panel">
+
+                    <div class="progress-panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                Topic Performance
+                            </span>
+
+                            <h2>
+                                Mastery by Topic
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="topic-progress-list"
+                        id="topicProgressList"
+                    >
+                    </div>
+
+                </section>
+
+
+
+                <!-- RECENT HISTORY -->
+
+                <section class="progress-panel">
+
+                    <div class="progress-panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                Score History
+                            </span>
+
+                            <h2>
+                                Recent Attempts
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="attempt-history-list"
+                        id="attemptHistoryList"
+                    >
+                    </div>
+
+                </section>
+
+
+
+                <!-- RESET -->
+
+                <section class="progress-reset-section">
+
+                    <p>
+                        Progress is saved only on this
+                        browser and device.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="progress-reset-btn"
+                        id="resetProgressButton"
+                    >
+                        Reset Saved Progress
+                    </button>
+
+                </section>
+
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                Philippine Governance Learning Hub
+            </p>
+
+            <small>
+                TOS-Based Learning and Review Website
+            </small>
+
+        </div>
+
+    </footer>
+
+
+    <script src="json.js"></script>
+
+    <script src="progress.js"></script>
+
+    <script>
+
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                renderProgressPage();
+
+
+                function renderProgressPage() {
+
+
+                    const overall =
+                        GovLearnProgress
+                            .getOverallStatistics();
+
+
+                    const topicStats =
+                        GovLearnProgress
+                            .getTopicStatistics();
+
+
+                    const attempts =
+                        GovLearnProgress
+                            .getAllAttempts();
+
+
+
+                    const emptyState =
+                        document.getElementById(
+                            "progressEmptyState"
+                        );
+
+
+                    const progressContent =
+                        document.getElementById(
+                            "progressContent"
+                        );
+
+
+
+                    // NO DATA
+
+                    if (
+                        overall.totalAttempts === 0
+                    ) {
+
+                        emptyState
+                            .classList
+                            .remove(
+                                "hidden"
+                            );
+
+
+                        progressContent
+                            .classList
+                            .add(
+                                "hidden"
+                            );
+
+
+                        return;
+
+                    }
+
+
+
+                    // SHOW DATA
+
+                    emptyState
+                        .classList
+                        .add(
+                            "hidden"
+                        );
+
+
+                    progressContent
+                        .classList
+                        .remove(
+                            "hidden"
+                        );
+
+
+
+                    // =========================================
+                    // OVERALL
+                    // =========================================
+
+                    document.getElementById(
+                        "overallAverage"
+                    ).textContent =
+                        overall.average +
+                        "%";
+
+
+                    document.getElementById(
+                        "bestPerformance"
+                    ).textContent =
+                        overall.best +
+                        "%";
+
+
+                    document.getElementById(
+                        "practiceSessions"
+                    ).textContent =
+                        overall.practiceCount;
+
+
+                    document.getElementById(
+                        "challengeSessions"
+                    ).textContent =
+                        overall.challengeCount;
+
+
+
+                // =========================================
+                // LEARNING ANALYSIS
+                // =========================================
+
+                const learningAnalysis =
+                GovLearnProgress
+                .getLearningAnalysis();
+
+
+                renderLearningAnalysis(
+                learningAnalysis
+                );
+
+
+                // =========================================
+                // TOPIC PROGRESS
+                // =========================================
+
+                renderTopicProgress(
+                topicStats
+                );
+
+
+                // =========================================
+                // HISTORY
+                // =========================================
+
+                renderAttemptHistory(
+                attempts
+                );
+
+        }
+
+
+                // =============================================
+// LEARNING ANALYSIS
+// =============================================
+
+function renderLearningAnalysis(
+    analysis
+) {
+
+
+    // =========================================
+    // DATA NOTE
+    // =========================================
+
+    const analysisDataNote =
+        document.getElementById(
+            "analysisDataNote"
+        );
+
+
+    analysisDataNote.textContent =
+        "Analysis based on " +
+        analysis.totalAnswers +
+        " saved question responses on this device.";
+
+
+
+    // =========================================
+    // WEAKEST TOPIC
+    // =========================================
+
+    const weakestTopicName =
+        document.getElementById(
+            "weakestTopicName"
+        );
+
+
+    const weakestTopicAccuracy =
+        document.getElementById(
+            "weakestTopicAccuracy"
+        );
+
+
+    const weakestTopicMessage =
+        document.getElementById(
+            "weakestTopicMessage"
+        );
+
+
+    const weakestTopicLink =
+        document.getElementById(
+            "weakestTopicLink"
+        );
+
+
+
+    if (
+        analysis.weakestTopic
+    ) {
+
+        weakestTopicName.textContent =
+            analysis
+                .weakestTopic
+                .title;
+
+
+        weakestTopicAccuracy.textContent =
+            analysis
+                .weakestTopic
+                .accuracy
+            +
+            "%";
+
+
+        weakestTopicMessage.textContent =
+            getAnalysisMessage(
+                analysis
+                    .weakestTopic
+                    .accuracy
+            );
+
+
+        weakestTopicLink.href =
+            "topic.html?id=" +
+            analysis
+                .weakestTopic
+                .id;
+        
+                const priorityAssistantLink =
+                document.getElementById(
+                    "priorityAssistantLink"
+                );
+
+
+            if (priorityAssistantLink) {
+
+                priorityAssistantLink.href =
+                    "assistant.html?topic="
+                    +
+                    analysis
+                        .weakestTopic
+                        .id;
+
+            }
+
+    }
+
+
+
+    else {
+
+        weakestTopicLink.style.display =
+            "none";
+
+    }
+
+
+
+    // =========================================
+    // STRONGEST TOPIC
+    // =========================================
+
+    if (
+        analysis.strongestTopic
+    ) {
+
+        document.getElementById(
+            "strongestTopicName"
+        ).textContent =
+            analysis
+                .strongestTopic
+                .title;
+
+
+        document.getElementById(
+            "strongestTopicAccuracy"
+        ).textContent =
+            analysis
+                .strongestTopic
+                .accuracy
+            +
+            "%";
+
+
+        document.getElementById(
+            "strongestTopicMessage"
+        ).textContent =
+            "You currently perform best in this topic based on your saved answers.";
+
+    }
+
+
+
+    // =========================================
+    // WEAKEST COGNITIVE LEVEL
+    // =========================================
+
+    if (
+        analysis.weakestCognitive
+    ) {
+
+        document.getElementById(
+            "weakestCognitiveName"
+        ).textContent =
+            analysis
+                .weakestCognitive
+                .title;
+
+
+        document.getElementById(
+            "weakestCognitiveAccuracy"
+        ).textContent =
+            analysis
+                .weakestCognitive
+                .accuracy
+            +
+            "%";
+
+
+        document.getElementById(
+            "weakestCognitiveMessage"
+        ).textContent =
+            getCognitiveMessage(
+                analysis
+                    .weakestCognitive
+                    .title
+            );
+
+    }
+
+
+
+    // =========================================
+    // COGNITIVE LEVEL CARDS
+    // =========================================
+
+    const cognitiveGrid =
+        document.getElementById(
+            "cognitiveAnalysisGrid"
+        );
+
+
+    cognitiveGrid.innerHTML =
+        "";
+
+
+    const preferredOrder = [
+
+        "Remembering",
+
+        "Understanding",
+
+        "Analyzing"
+
+    ];
+
+
+
+    preferredOrder.forEach(
+
+        function (
+            level
+        ) {
+
+
+            const data =
+                analysis
+                    .cognitivePerformance[
+                        level
+                    ];
+
+
+
+            const card =
+                document.createElement(
+                    "article"
+                );
+
+
+            card.className =
+                "cognitive-analysis-card";
+
+
+
+            if (
+                !data ||
+                data.total === 0
+            ) {
+
+                card.innerHTML = `
+
+                    <span>
+                        ${level}
+                    </span>
+
+                    <strong>
+                        —
+                    </strong>
+
+                    <small>
+                        No data yet
+                    </small>
+
+                `;
+
+            }
+
+            else {
+
+                const status =
+                    getAccuracyStatus(
+                        data.accuracy
+                    );
+
+
+                card.innerHTML = `
+
+                    <span>
+                        ${level}
+                    </span>
+
+                    <strong>
+                        ${data.accuracy}%
+                    </strong>
+
+                    <small class="${status.className}">
+                        ${status.text}
+                    </small>
+
+                    <div class="analysis-mini-bar">
+
+                        <div
+                            style="
+                                width:
+                                ${data.accuracy}%;
+                            "
+                        >
+                        </div>
+
+                    </div>
+
+                    <p>
+                        ${data.correct}
+                        correct of
+                        ${data.total}
+                        questions
+                    </p>
+
+                `;
+
+            }
+
+
+
+                            cognitiveGrid.appendChild(
+                                card
+                            );
+
+                        }
+
+                    );
+
+
+
+                    // =========================================
+                    // WEAK TOPICS
+                    // =========================================
+
+                    const weakTopicSection =
+                        document.getElementById(
+                            "weakTopicSection"
+                        );
+
+
+                    const weakTopicList =
+                        document.getElementById(
+                            "weakTopicList"
+                        );
+
+
+                    weakTopicList.innerHTML =
+                        "";
+
+
+
+                    if (
+                        analysis.weakTopics.length ===
+                        0
+                    ) {
+
+                        weakTopicSection
+                            .classList
+                            .add(
+                                "hidden"
+                            );
+
+                    }
+
+                    else {
+
+                        weakTopicSection
+                            .classList
+                            .remove(
+                                "hidden"
+                            );
+
+
+
+                        analysis
+                            .weakTopics
+                            .forEach(
+
+                                function (
+                                    topic
+                                ) {
+
+
+                                    const item =
+                                        document.createElement(
+                                            "article"
+                                        );
+
+
+                                    item.className =
+                                        "weak-topic-item";
+
+
+                                    item.innerHTML = `
+
+                                        <div>
+
+                                            <h4>
+                                                ${topic.title}
+                                            </h4>
+
+                                            <span>
+                                                ${topic.correct}
+                                                correct /
+                                                ${topic.total}
+                                                answered
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="weak-topic-actions">
+
+                                            <strong>
+                                                ${topic.accuracy}%
+                                            </strong>
+
+                                            <a
+                                                href="
+                                                    topic.html?id=${topic.id}
+                                                "
+                                            >
+                                                Review
+                                            </a>
+
+                                        </div>
+
+                                    `;
+
+
+
+                                    weakTopicList.appendChild(
+                                        item
+                                    );
+
+                                }
+
+                            );
+
+                    }
+
+                }
+
+
+
+                // =============================================
+                // ANALYSIS MESSAGE
+                // =============================================
+
+                function getAnalysisMessage(
+                    accuracy
+                ) {
+
+
+                    if (
+                        accuracy < 50
+                    ) {
+
+                        return (
+                            "This is currently your main focus area. Review the lesson before practicing again."
+                        );
+
+                    }
+
+
+                    if (
+                        accuracy < 70
+                    ) {
+
+                        return (
+                            "You are developing understanding, but this topic still needs additional review and practice."
+                        );
+
+                    }
+
+
+                    return (
+                        "Your performance is developing well, but this is currently the lowest-scoring topic in your saved results."
+                    );
+
+                }
+
+
+
+                // =============================================
+                // COGNITIVE MESSAGE
+                // =============================================
+
+                function getCognitiveMessage(
+                    level
+                ) {
+
+
+                    if (
+                        level ===
+                        "Remembering"
+                    ) {
+
+                        return (
+                            "Focus on recalling important definitions, terms, concepts, and factual information."
+                        );
+
+                    }
+
+
+                    if (
+                        level ===
+                        "Understanding"
+                    ) {
+
+                        return (
+                            "Focus on explaining concepts, recognizing relationships, and distinguishing ideas."
+                        );
+
+                    }
+
+
+                    if (
+                        level ===
+                        "Analyzing"
+                    ) {
+
+                        return (
+                            "Focus on scenario-based questions, comparisons, relationships, and applying concepts to situations."
+                        );
+
+                    }
+
+
+                    return (
+                        "Review this cognitive area through additional practice."
+                    );
+
+                }
+
+
+
+                // =============================================
+                // ACCURACY STATUS
+                // =============================================
+
+                function getAccuracyStatus(
+                    accuracy
+                ) {
+
+
+                    if (
+                        accuracy >= 85
+                    ) {
+
+                        return {
+
+                            text:
+                                "Strong",
+
+                            className:
+                                "analysis-strong"
+
+                        };
+
+                    }
+
+
+                    if (
+                        accuracy >= 70
+                    ) {
+
+                        return {
+
+                            text:
+                                "Good Progress",
+
+                            className:
+                                "analysis-good"
+
+                        };
+
+                    }
+
+
+                    if (
+                        accuracy >= 50
+                    ) {
+
+                        return {
+
+                            text:
+                                "Needs Review",
+
+                            className:
+                                "analysis-review"
+
+                        };
+
+                    }
+
+
+                    return {
+
+                        text:
+                            "Focus Area",
+
+                        className:
+                            "analysis-focus"
+
+                    };
+
+                }
+
+                // =============================================
+                // TOPIC PROGRESS
+                // =============================================
+
+                function renderTopicProgress(
+                    topicStats
+                ) {
+
+
+                    const container =
+                        document.getElementById(
+                            "topicProgressList"
+                        );
+
+
+                    container.innerHTML =
+                        "";
+
+
+
+                    topics.forEach(
+
+                        function (topic) {
+
+
+                            const stats =
+                                topicStats[
+                                    topic.id
+                                ];
+
+
+                            const card =
+                                document.createElement(
+                                    "article"
+                                );
+
+
+                            card.className =
+                                "topic-progress-card";
+
+
+
+                            if (!stats) {
+
+
+                                card.innerHTML = `
+
+                                    <div class="topic-progress-info">
+
+                                        <h3>
+                                            ${topic.title}
+                                        </h3>
+
+                                        <span>
+                                            No practice yet
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="mastery-display">
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                `;
+
+
+                                container.appendChild(
+                                    card
+                                );
+
+
+                                return;
+
+                            }
+
+
+
+                            const masteryStatus =
+                                getMasteryStatus(
+                                    stats.average
+                                );
+
+
+
+                            const momentum =
+                                getMomentum(
+                                    stats.change
+                                );
+
+
+
+                            card.innerHTML = `
+
+                                <div class="topic-progress-main">
+
+
+                                    <div class="topic-progress-info">
+
+                                        <h3>
+                                            ${stats.title}
+                                        </h3>
+
+                                        <div class="topic-progress-details">
+
+                                            <span>
+                                                ${stats.attempts.length}
+                                                attempt(s)
+                                            </span>
+
+                                            <span>
+                                                Best:
+                                                ${stats.best}%
+                                            </span>
+
+                                            <span class="${momentum.className}">
+                                                ${momentum.text}
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="mastery-display">
+
+                                        <strong>
+                                            ${stats.average}%
+                                        </strong>
+
+                                        <span class="${masteryStatus.className}">
+                                            ${masteryStatus.text}
+                                        </span>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="mastery-progress-bar">
+
+                                    <div
+                                        class="mastery-progress-fill"
+                                        style="
+                                            width:
+                                            ${stats.average}%;
+                                        "
+                                    >
+                                    </div>
+
+                                </div>
+
+                            `;
+
+
+
+                            container.appendChild(
+                                card
+                            );
+
+                        }
+
+                    );
+
+                }
+
+
+
+                // =============================================
+                // ATTEMPT HISTORY
+                // =============================================
+
+                function renderAttemptHistory(
+                    attempts
+                ) {
+
+
+                    const container =
+                        document.getElementById(
+                            "attemptHistoryList"
+                        );
+
+
+                    container.innerHTML =
+                        "";
+
+
+
+                    attempts
+                        .slice(
+                            0,
+                            15
+                        )
+                        .forEach(
+
+                            function (attempt) {
+
+
+                                const item =
+                                    document.createElement(
+                                        "article"
+                                    );
+
+
+                                item.className =
+                                    "attempt-history-item";
+
+
+                                const date =
+                                    new Date(
+                                        attempt.date
+                                    );
+
+
+                                const formattedDate =
+                                    date.toLocaleString();
+
+
+
+                                let activityName;
+
+
+                                if (
+                                    attempt.type ===
+                                    "practice"
+                                ) {
+
+                                    activityName =
+                                        attempt.topicTitle;
+
+                                }
+
+                                else {
+
+                                    activityName =
+                                        "Timed Challenge";
+
+                                }
+
+
+
+                                item.innerHTML = `
+
+                                    <div class="attempt-history-info">
+
+                                        <span class="attempt-type">
+
+                                            ${
+                                                attempt.type
+                                                ===
+                                                "practice"
+                                                ?
+                                                "Practice Quiz"
+                                                :
+                                                "Timed Challenge"
+                                            }
+
+                                        </span>
+
+                                        <h3>
+                                            ${activityName}
+                                        </h3>
+
+                                        <small>
+                                            ${formattedDate}
+                                        </small>
+
+                                    </div>
+
+
+                                    <div class="attempt-history-score">
+
+                                        <strong>
+                                            ${attempt.score}/${attempt.total}
+                                        </strong>
+
+                                        <span>
+                                            ${attempt.percentage}%
+                                        </span>
+
+                                    </div>
+
+                                `;
+
+
+
+                                container.appendChild(
+                                    item
+                                );
+
+                            }
+
+                        );
+
+                }
+
+
+
+                // =============================================
+                // MASTERY STATUS
+                // =============================================
+
+                function getMasteryStatus(
+                    percentage
+                ) {
+
+
+                    if (
+                        percentage >= 85
+                    ) {
+
+                        return {
+
+                            text:
+                                "Mastered",
+
+                            className:
+                                "mastery-high"
+
+                        };
+
+                    }
+
+
+                    if (
+                        percentage >= 70
+                    ) {
+
+                        return {
+
+                            text:
+                                "Good Progress",
+
+                            className:
+                                "mastery-good"
+
+                        };
+
+                    }
+
+
+                    if (
+                        percentage >= 50
+                    ) {
+
+                        return {
+
+                            text:
+                                "Needs Review",
+
+                            className:
+                                "mastery-review"
+
+                        };
+
+                    }
+
+
+                    return {
+
+                        text:
+                            "Focus Area",
+
+                        className:
+                            "mastery-focus"
+
+                    };
+
+                }
+
+
+
+                // =============================================
+                // MOMENTUM
+                // =============================================
+
+                function getMomentum(
+                    difference
+                ) {
+
+
+                    if (
+                        difference > 0
+                    ) {
+
+                        return {
+
+                            text:
+                                "↑ +" +
+                                difference +
+                                "% from last attempt",
+
+                            className:
+                                "momentum-up"
+
+                        };
+
+                    }
+
+
+                    if (
+                        difference < 0
+                    ) {
+
+                        return {
+
+                            text:
+                                "↓ " +
+                                difference +
+                                "% from last attempt",
+
+                            className:
+                                "momentum-down"
+
+                        };
+
+                    }
+
+
+                    return {
+
+                        text:
+                            "No change",
+
+                        className:
+                            "momentum-same"
+
+                    };
+
+                }
+
+
+
+                // =============================================
+                // RESET
+                // =============================================
+
+                document.getElementById(
+                    "resetProgressButton"
+                )
+                .addEventListener(
+
+                    "click",
+
+                    function () {
+
+
+                        const confirmation =
+                            confirm(
+                                "Are you sure you want to delete all saved progress on this device?"
+                            );
+
+
+                        if (!confirmation) {
+
+                            return;
+
+                        }
+
+
+                        GovLearnProgress
+                            .reset();
+
+
+                        location.reload();
+
+                    }
+
+                );
+
+
+            }
+        );
+
+    </script>
+    <script src="pwa.js"></script>
+
+    <script src="site-ui.js"></script>
+
+</body>
+
+</html>

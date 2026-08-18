@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#173b73"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="icon"
+        href="icon-192.png"
+    >
+
+    <title>
+        Timed Challenge | GovLearn
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="main-header">
+
+        <div class="container nav-container">
+
+
+            <div class="logo">
+
+                <span class="logo-icon">
+                    ⚖️
+                </span>
+
+                <div>
+
+                    <h2>
+                        GovLearn
+                    </h2>
+
+                    <small>
+                        Philippine Governance Learning Hub
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#topics">
+                    Topics
+                </a>
+
+                <a href="index.html#assessments">
+                    Assessments
+                </a>
+
+                <a href="progress.html">Progress</a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         TIMED CHALLENGE
+    ====================================================== -->
+
+    <main class="quiz-page">
+
+        <div class="container quiz-container">
+
+
+            <!-- =================================================
+                 INTRO / START SCREEN
+            ================================================== -->
+
+            <section
+                class="challenge-start-card"
+                id="challengeStartCard"
+            >
+
+
+                <div class="challenge-start-icon">
+                    ⏱️
+                </div>
+
+
+                <span class="section-label">
+                    Timed Challenge
+                </span>
+
+
+                <h1>
+                    Test Your Knowledge Under Time Pressure
+                </h1>
+
+
+                <p class="challenge-description">
+
+                    Answer 10 questions covering the five
+                    Politics and Governance topics.
+
+                    You will have 30 seconds to answer
+                    each question.
+
+                </p>
+
+
+
+                <div class="challenge-rules">
+
+
+                    <div class="challenge-rule">
+
+                        <span>
+                            📝
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                10 Questions
+                            </strong>
+
+                            <small>
+                                Mixed topics
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="challenge-rule">
+
+                        <span>
+                            ⏱️
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                30 Seconds
+                            </strong>
+
+                            <small>
+                                Per question
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="challenge-rule">
+
+                        <span>
+                            🎯
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                TOS-Based
+                            </strong>
+
+                            <small>
+                                Cognitive distribution
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="challenge-rule">
+
+                        <span>
+                            💡
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Answer Review
+                            </strong>
+
+                            <small>
+                                Explanations after challenge
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="challenge-distribution">
+
+                    <strong>
+                        Challenge Distribution
+                    </strong>
+
+                    <div>
+
+                        <span>
+                            2 Remembering
+                        </span>
+
+                        <span>
+                            3 Understanding
+                        </span>
+
+                        <span>
+                            5 Analyzing
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="challenge-warning">
+
+                    <strong>
+                        Important:
+                    </strong>
+
+                    If the timer reaches zero, the question
+                    will automatically be marked as unanswered
+                    and the challenge will proceed to the next item.
+
+                </div>
+
+
+
+                <div class="challenge-start-actions">
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="startChallengeButton"
+                    >
+                        Start Timed Challenge
+                    </button>
+
+
+                    <a
+                        href="index.html#assessments"
+                        class="secondary-btn"
+                    >
+                        Back to Assessments
+                    </a>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACTIVE CHALLENGE
+            ================================================== -->
+
+            <section
+                class="quiz-card hidden"
+                id="challengeQuizCard"
+            >
+
+
+                <!-- TOP INFORMATION -->
+
+                <div class="challenge-top-row">
+
+
+                    <div>
+
+                        <span class="challenge-mode-label">
+                            Timed Challenge
+                        </span>
+
+                        <span id="challengeQuestionCounter">
+                            Question 1 of 10
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- TIMER -->
+
+                    <div
+                        class="timer-box"
+                        id="timerBox"
+                    >
+
+                        <span class="timer-icon">
+                            ⏱️
+                        </span>
+
+                        <div>
+
+                            <small>
+                                Time Left
+                            </small>
+
+                            <strong id="timerDisplay">
+                                00:30
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TIMER BAR -->
+
+                <div class="timer-progress">
+
+                    <div
+                        class="timer-progress-fill"
+                        id="timerProgressFill"
+                    >
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUESTION INFORMATION -->
+
+                <div class="challenge-question-meta">
+
+
+                    <span
+                        class="question-level"
+                        id="challengeLevel"
+                    >
+                        Remembering
+                    </span>
+
+
+                    <span
+                        class="challenge-topic-badge"
+                        id="challengeTopic"
+                    >
+                        Topic
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- QUESTION -->
+
+                <h2
+                    class="quiz-question"
+                    id="challengeQuestionText"
+                >
+                    Loading question...
+                </h2>
+
+
+
+                <!-- ANSWERS -->
+
+                <div
+                    class="answer-options"
+                    id="challengeAnswerOptions"
+                >
+                </div>
+
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    class="challenge-message hidden"
+                    id="challengeMessage"
+                >
+                </div>
+
+
+
+                <!-- NEXT -->
+
+                <div class="challenge-controls">
+
+
+                    <span id="challengeAnsweredCounter">
+                        0 of 10 Answered
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="challengeNextButton"
+                    >
+                        Submit & Next
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CHALLENGE RESULT
+            ================================================== -->
+
+            <section
+                class="quiz-result-card hidden"
+                id="challengeResultCard"
+            >
+
+
+                <div class="result-icon">
+                    🏁
+                </div>
+
+
+                <span class="section-label">
+                    Timed Challenge Completed
+                </span>
+
+
+                <h2>
+                    Challenge Result
+                </h2>
+
+
+
+                <div class="score-display">
+
+                    <strong id="challengeFinalScore">
+                        0/10
+                    </strong>
+
+                    <span id="challengeFinalPercentage">
+                        0%
+                    </span>
+
+                </div>
+
+
+
+                <p
+                    class="result-message"
+                    id="challengeResultMessage"
+                >
+                </p>
+
+
+
+                <div class="result-summary">
+
+
+                    <div class="result-summary-item">
+
+                        <span>
+                            Correct
+                        </span>
+
+                        <strong id="challengeCorrect">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-summary-item">
+
+                        <span>
+                            Incorrect
+                        </span>
+
+                        <strong id="challengeIncorrect">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-summary-item">
+
+                        <span>
+                            Time Expired
+                        </span>
+
+                        <strong id="challengeExpired">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="result-actions">
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="challengeReviewButton"
+                    >
+                        Review My Answers
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="challengeRetryButton"
+                    >
+                        Try Again
+                    </button>
+
+
+                    <a
+                        href="index.html#assessments"
+                        class="secondary-btn"
+                    >
+                        Return to Assessments
+                    </a>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CHALLENGE ANSWER REVIEW
+            ================================================== -->
+
+            <section
+                class="answer-review-section hidden"
+                id="challengeReviewSection"
+            >
+
+
+                <div class="review-header">
+
+
+                    <div>
+
+                        <span class="section-label">
+                            Challenge Review
+                        </span>
+
+                        <h2>
+                            Review Your Answers
+                        </h2>
+
+                        <p>
+                            Review your mistakes and identify
+                            the concepts that need additional practice.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="challengeBackResultButton"
+                    >
+                        ← Back to Result
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- SUMMARY -->
+
+                <div class="review-summary-card">
+
+
+                    <div class="review-summary-item">
+
+                        <span>
+                            Assessment
+                        </span>
+
+                        <strong>
+                            Timed Challenge
+                        </strong>
+
+                    </div>
+
+
+                    <div class="review-summary-item">
+
+                        <span>
+                            Score
+                        </span>
+
+                        <strong id="challengeReviewScore">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="review-summary-item">
+
+                        <span>
+                            Accuracy
+                        </span>
+
+                        <strong id="challengeReviewAccuracy">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- REVIEW QUESTIONS -->
+
+                <div
+                    class="answer-review-list"
+                    id="challengeReviewList"
+                >
+                </div>
+
+
+
+                <!-- ACTIONS -->
+
+                <div class="review-bottom-actions">
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="challengeReviewRetryButton"
+                    >
+                        Try Challenge Again
+                    </button>
+
+
+                    <a
+                        href="index.html#assessments"
+                        class="secondary-btn"
+                    >
+                        Return to Assessments
+                    </a>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                Philippine Governance Learning Hub
+            </p>
+
+            <small>
+                TOS-Based Learning and Review Website
+            </small>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="json.js"></script>
+
+    <script src="tos-config.js"></script>
+
+    <script src="progress.js"></script>
+
+    <script src="challenge.js"></script>
+    
+    <script src="pwa.js"></script>
+
+    <script src="site-ui.js"></script>
+</body>
+
+</html>

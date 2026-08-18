@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#173b73"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="icon"
+        href="icon-192.png"
+    >
+    <title>Assessment | GovLearn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">⚖️</span>
+                <div>
+                    <h2>GovLearn</h2>
+                    <small>Philippine Governance Learning Hub</small>
+                </div>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html#topics">Topics</a>
+                <a href="index.html#assessments">Assessments</a>
+                <a href="progress.html">Progress</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="quiz-page">
+        <div class="container quiz-container">
+
+            <section class="quiz-header-card">
+                <a href="index.html#assessments" class="back-link">
+                    ← Back to Assessments
+                </a>
+
+                <span class="section-label" id="assessmentLabel">
+                    Assessment
+                </span>
+
+                <h1 id="assessmentTitle">
+                    Loading Assessment...
+                </h1>
+
+                <p id="assessmentSubtitle"></p>
+            </section>
+
+            <section class="quiz-card" id="assessmentCard">
+
+                <div class="assessment-section-heading">
+                    <span id="sectionTitle">Section</span>
+                    <small id="sectionInstructions"></small>
+                </div>
+
+                <div class="quiz-progress-top">
+                    <span id="questionCounter">Question 1</span>
+                    <span id="answeredCounter">0 Answered</span>
+                </div>
+
+                <div class="quiz-progress-bar">
+                    <div class="quiz-progress-fill" id="assessmentProgressFill"></div>
+                </div>
+
+                <div class="question-meta">
+                    <span class="question-level" id="questionTypeLabel">
+                        Multiple Choice
+                    </span>
+                </div>
+
+                <h2 class="quiz-question" id="assessmentQuestion">
+                    Loading question...
+                </h2>
+
+                <div class="answer-options" id="assessmentOptions"></div>
+
+                <div class="assessment-key-note hidden" id="keyNote"></div>
+
+                <div class="quiz-controls">
+                    <button class="secondary-btn" id="assessmentPreviousButton">
+                        Previous
+                    </button>
+
+                    <button class="primary-btn" id="assessmentNextButton">
+                        Next Question
+                    </button>
+                </div>
+
+            </section>
+
+            <section class="quiz-result-card hidden" id="assessmentResultCard">
+                <div class="result-icon">📊</div>
+
+                <span class="section-label">
+                    Assessment Completed
+                </span>
+
+                <h2>Your Result</h2>
+
+                <div class="score-display">
+                    <strong id="assessmentFinalScore">0/0</strong>
+                    <span id="assessmentPercentage">0%</span>
+                </div>
+
+                <p class="result-message" id="assessmentResultMessage"></p>
+
+                <div class="result-summary">
+                    <div class="result-summary-item">
+                        <span>Correct</span>
+                        <strong id="assessmentCorrect">0</strong>
+                    </div>
+
+                    <div class="result-summary-item">
+                        <span>Incorrect</span>
+                        <strong id="assessmentIncorrect">0</strong>
+                    </div>
+
+                    <div class="result-summary-item">
+                        <span>Pending Key</span>
+                        <strong id="assessmentPending">0</strong>
+                    </div>
+                </div>
+
+                <div class="result-actions">
+                    <button class="primary-btn" id="assessmentRetryButton">
+                        Try Again
+                    </button>
+
+                    <button class="secondary-btn" id="assessmentHomeButton">
+                        Back to Assessments
+                    </button>
+                </div>
+
+                <p class="result-note" id="assessmentResultNote"></p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Philippine Governance Learning Hub</p>
+            <small>TOS-Based Learning and Review Website</small>
+        </div>
+    </footer>
+
+    <script src="assessment-data.js"></script>
+    <script src="assessment.js"></script>
+    <script src="pwa.js"></script>
+    <script src="site-ui.js"></script>
+</body>
+</html>

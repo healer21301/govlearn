@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#173b73"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="icon"
+        href="icon-192.png"
+    >
+    
+    <title>Philippine Governance Learning Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="container nav-container">
+
+            <div class="logo">
+                <span class="logo-icon">⚖️</span>
+                <div>
+                    <h2>ICYCAKES JINGLEBELLS</h2>
+                    <small>Philippine Governance Learning Hub</small>
+                </div>
+            </div>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#topics">Topics</a>
+                <a href="#assessments">Assessments</a>
+                <a href="progress.html">Progress</a>
+
+                <button class="assistant-btn" id="assistantButton">
+                    Study Assistant
+                </button>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="tag">
+                        Politics and Governance
+                    </span>
+
+                    <h1>
+                        Learn. Practice. Improve.
+                    </h1>
+
+                    <p>
+                        A TOS-based learning website designed to help students
+                        understand Philippine Politics and Governance through
+                        lessons, practice assessments, progress tracking,
+                        and focused review.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <button
+                            class="primary-btn"
+                            id="startLearningButton"
+                        >
+                            Start Learning
+                        </button>
+
+                        <button
+                            class="secondary-btn"
+                            id="practiceButton"
+                        >
+                            Practice Quiz
+                        </button>
+                        
+                        <button
+                        type="button"
+                        class="secondary-btn"
+                        id="installGovLearnButton"
+                    >
+                        📲 Install GovLearn
+                    </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card">
+
+                    <div class="card-icon">
+                        📚
+                    </div>
+
+                    <h3>Your Learning Journey</h3>
+
+                    <div class="journey-item">
+                        <span>1</span>
+                        <p>Study the lesson</p>
+                    </div>
+
+                    <div class="journey-item">
+                        <span>2</span>
+                        <p>Take a practice quiz</p>
+                    </div>
+
+                    <div class="journey-item">
+                        <span>3</span>
+                        <p>Review your mistakes</p>
+                    </div>
+
+                    <div class="journey-item">
+                        <span>4</span>
+                        <p>Improve weak topics</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOPICS -->
+        <section class="topics-section" id="topics">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        TOS-Based Coverage
+                    </span>
+
+                    <h2>
+                        Learning Topics
+                    </h2>
+
+                    <p>
+                        Select a topic to begin reviewing.
+                    </p>
+
+                </div>
+
+
+                <div class="topic-grid">
+
+                    <article class="topic-card">
+
+                        <div class="topic-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Concept of Politics and Governance
+                        </h3>
+
+                        <p>
+                            Understand the meaning, relationship,
+                            and importance of politics and governance.
+                        </p>
+
+                        <button
+                            class="topic-btn"
+                            data-topic="politics"
+                        >
+                            Start Topic →
+                        </button>
+
+                    </article>
+
+
+                    <article class="topic-card">
+
+                        <div class="topic-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Political Ideologies
+                        </h3>
+
+                        <p>
+                            Explore and differentiate major
+                            political ideologies.
+                        </p>
+
+                        <button
+                            class="topic-btn"
+                            data-topic="ideologies"
+                        >
+                            Start Topic →
+                        </button>
+
+                    </article>
+
+
+                    <article class="topic-card">
+
+                        <div class="topic-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Nature, Dimensions, Types,
+                            and Consequences of Power
+                        </h3>
+
+                        <p>
+                            Examine how power operates within
+                            politics and society.
+                        </p>
+
+                        <button
+                            class="topic-btn"
+                            data-topic="power"
+                        >
+                            Start Topic →
+                        </button>
+
+                    </article>
+
+
+                    <article class="topic-card">
+
+                        <div class="topic-number">
+                            04
+                        </div>
+
+                        <h3>
+                            States, Nations, and Globalization
+                        </h3>
+
+                        <p>
+                            Analyze nations, states, and their
+                            relationship in a globalized world.
+                        </p>
+
+                        <button
+                            class="topic-btn"
+                            data-topic="globalization"
+                        >
+                            Start Topic →
+                        </button>
+
+                    </article>
+
+
+                    <article class="topic-card">
+
+                        <div class="topic-number">
+                            05
+                        </div>
+
+                        <h3>
+                            Evolution of Philippine Politics
+                            and Governance
+                        </h3>
+
+                        <p>
+                            Examine the development of Philippine
+                            politics and governance.
+                        </p>
+
+                        <button
+                            class="topic-btn"
+                            data-topic="evolution"
+                        >
+                            Start Topic →
+                        </button>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LEARNING MODES -->
+        <section class="modes-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        Learning Modes
+                    </span>
+
+                    <h2>
+                        Choose How You Want to Learn
+                    </h2>
+
+                </div>
+
+
+                <div class="mode-grid">
+
+                    <div class="mode-card">
+                        <div class="mode-icon">📖</div>
+
+                        <h3>Learn</h3>
+
+                        <p>
+                            Review concepts, definitions,
+                            examples, and explanations.
+                        </p>
+                    </div>
+
+
+                    <div class="mode-card">
+                        <div class="mode-icon">📝</div>
+
+                        <h3>Practice</h3>
+
+                        <p>
+                            Answer TOS-based questions without
+                            time pressure.
+                        </p>
+                    </div>
+
+
+                    <div class="mode-card">
+                        <div class="mode-icon">⏱️</div>
+
+                        <h3>Timed Challenge</h3>
+
+                        <p>
+                            Practice answering questions within
+                            a limited amount of time.
+                        </p>
+                    </div>
+
+
+                    <div class="mode-card">
+
+                        <div class="mode-icon">
+                            🎯
+                        </div>
+                    
+                        <h3>
+                            Focus Practice
+                        </h3>
+                    
+                        <p>
+                            Receive additional questions based
+                            on your saved weak topics and skills.
+                        </p>
+                    
+                        <a
+                            href="focus.html"
+                            class="mode-action-link"
+                        >
+                            Start Focus Practice →
+                        </a>
+                    
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+<!-- =========================================
+     ASSESSMENT CENTER
+     Place this AFTER the Learning Modes section
+     and BEFORE the Progress section.
+========================================= -->
+
+<section class="assessments-section" id="assessments">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                Assessments
+            </span>
+
+            <h2>
+                Practice and Prepare
+            </h2>
+
+            <p>
+                Choose between topic practice, the official quiz,
+                and preliminary exam practice.
+            </p>
+
+        </div>
+
+
+        <div class="assessment-grid">
+
+            <div class="assessment-card">
+
+                <div class="assessment-icon">
+                    ⏱️
+                </div>
+            
+                <h3>
+                    Timed Challenge
+                </h3><a href="#progress">Progress</a>
+            
+                <p>
+                    Answer mixed Politics and Governance questions
+                    under time pressure to prepare for timed assessments.
+                </p>
+            
+                <div class="assessment-meta">
+            
+                    <span>
+                        10 Items
+                    </span>
+            
+                    <span>
+                        30 Seconds Per Item
+                    </span>
+            
+                    <span>
+                        Mixed Topics
+                    </span>
+            
+                </div>
+            
+                <a
+                    href="challenge.html"
+                    class="primary-btn assessment-link"
+                >
+                    Start Timed Challenge
+                </a>
+            
+            </div>
+
+
+            <!-- OUR CURRENT PRACTICE QUIZ -->
+
+            <article class="assessment-card">
+
+                <div class="assessment-icon">
+                    📝
+                </div>
+
+                <h3>
+                    Practice by Topic
+                </h3>
+
+                <p>
+                    Review one topic at a time using the practice
+                    questions we created for the learning website.
+                </p>
+
+                <div class="assessment-meta">
+
+                    <span>
+                        Topic-Based
+                    </span>
+
+                    <span>
+                        Practice
+                    </span>
+
+                </div>
+
+                <a
+                    href="#topics"
+                    class="primary-btn assessment-link"
+                >
+                    Choose a Topic
+                </a>
+
+            </article>
+
+
+            <!-- OFFICIAL QUIZ -->
+
+            <article class="assessment-card">
+
+                <div class="assessment-icon">
+                    📋
+                </div>
+
+                <h3>
+                    Official Quiz 2
+                </h3>
+
+                <p>
+                    Take the Philippine Governance quiz provided
+                    by the subject teacher.
+                </p>
+
+                <div class="assessment-meta">
+
+                    <span>
+                        50 Items
+                    </span>
+
+                    <span>
+                        3 Parts
+                    </span>
+
+                </div>
+
+                <a
+                    href="assessment.html?type=official-quiz"
+                    class="primary-btn assessment-link"
+                >
+                    Start Official Quiz
+                </a>
+
+            </article>
+
+
+            <!-- EXAM PRACTICE -->
+
+            <article class="assessment-card">
+
+                <div class="assessment-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Prelim Exam Practice
+                </h3>
+
+                <p>
+                    Practice using the questions from the
+                    Philippine Governance preliminary examination.
+                </p>
+
+                <div class="assessment-meta">
+
+                    <span>
+                        60 Items
+                    </span>
+
+                    <span>
+                        Multiple Choice
+                    </span>
+
+                </div>
+
+                <a
+                    href="assessment.html?type=exam-practice"
+                    class="primary-btn assessment-link"
+                >
+                    Start Exam Practice
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- PROGRESS PREVIEW -->
+        <section class="progress-section" id="progress">
+
+            <div class="container progress-container">
+
+                <div>
+
+                    <span class="section-label">
+                        Your Progress
+                    </span>
+
+                    <h2>
+                        Track Your Learning
+                    </h2>
+
+                    <p>
+                        Your scores and topic mastery will appear here
+                        as you complete learning activities.
+                    </p>
+
+                </div>
+
+
+                <div class="progress-card">
+
+                    <div class="progress-placeholder">
+                        📊
+                    </div>
+
+                    <h3>No activity yet</h3>
+
+                    <p>
+                        Complete your first practice quiz
+                        to begin tracking your progress.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container">
+
+            <p>
+                Philippine Governance Learning Hub
+            </p>
+
+            <small>
+                TOS-Based Learning and Review Website
+            </small>
+            <br>
+            <small class="educators">
+                Educators - Ms. Precious Gamboa and Ms. Jasmine De Guzman 
+            </small>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="json.js"></script>
+
+    <script src="progress.js"></script>
+
+    <script src="script.js"></script>
+
+    <script src="pwa.js"></script>
+
+    <script src="site-ui.js"></script>
+
+</body>
+</html>

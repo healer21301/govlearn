@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#173b73"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="icon"
+        href="icon-192.png"
+    >
+
+    <title>
+        Focus Practice | GovLearn
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="main-header">
+
+        <div class="container nav-container">
+
+
+            <div class="logo">
+
+                <span class="logo-icon">
+                    ⚖️
+                </span>
+
+                <div>
+
+                    <h2>
+                        GovLearn
+                    </h2>
+
+                    <small>
+                        Philippine Governance Learning Hub
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#topics">
+                    Topics
+                </a>
+
+                <a href="index.html#assessments">
+                    Assessments
+                </a>
+
+                <a href="progress.html">
+                    Progress
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         FOCUS PRACTICE PAGE
+    ====================================================== -->
+
+    <main class="quiz-page">
+
+        <div class="container quiz-container">
+
+
+            <!-- =================================================
+                 INTRO SCREEN
+            ================================================== -->
+
+            <section
+                class="focus-start-card"
+                id="focusStartCard"
+            >
+
+
+                <div class="focus-start-icon">
+                    🎯
+                </div>
+
+
+                <span class="section-label">
+                    Adaptive Learning
+                </span>
+
+
+                <h1>
+                    Focus Practice
+                </h1>
+
+
+                <p class="focus-description">
+
+                    GovLearn uses your saved quiz performance
+                    to give you more practice in areas where
+                    you currently need improvement.
+
+                </p>
+
+
+
+                <!-- PERSONALIZED ANALYSIS -->
+
+                <div
+                    class="focus-analysis-preview"
+                    id="focusAnalysisPreview"
+                >
+
+
+                    <div class="focus-analysis-item">
+
+                        <span>
+                            Priority Topic
+                        </span>
+
+                        <strong id="focusWeakTopic">
+                            Analyzing progress...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="focus-analysis-item">
+
+                        <span>
+                            Skill to Improve
+                        </span>
+
+                        <strong id="focusWeakSkill">
+                            Analyzing progress...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="focus-analysis-item">
+
+                        <span>
+                            Practice Type
+                        </span>
+
+                        <strong>
+                            Personalized
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- EXPLANATION -->
+
+                <div class="focus-info-box">
+
+                    <strong>
+                        How Focus Practice Works
+                    </strong>
+
+                    <p>
+
+                        Most questions will come from your
+                        weakest topic. GovLearn will also try
+                        to include more questions from the
+                        cognitive skill where you currently
+                        have the lowest accuracy.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- NO DATA MESSAGE -->
+
+                <div
+                    class="focus-no-data hidden"
+                    id="focusNoData"
+                >
+
+                    <strong>
+                        More learning data is needed.
+                    </strong>
+
+                    <p>
+
+                        Complete at least one Practice Quiz or
+                        Timed Challenge first so GovLearn can
+                        identify your weak areas.
+
+                    </p>
+
+                    <a
+                        href="index.html#topics"
+                        class="secondary-btn"
+                    >
+                        Take a Practice Quiz
+                    </a>
+
+                </div>
+
+
+
+                <div
+                    class="focus-start-actions"
+                    id="focusStartActions"
+                >
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="startFocusButton"
+                    >
+                        Start Focus Practice
+                    </button>
+
+
+                    <a
+                        href="progress.html"
+                        class="secondary-btn"
+                    >
+                        View Progress
+                    </a>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACTIVE FOCUS QUIZ
+            ================================================== -->
+
+            <section
+                class="quiz-card hidden"
+                id="focusQuizCard"
+            >
+
+
+                <div class="focus-quiz-top">
+
+
+                    <div>
+
+                        <span class="focus-mode-label">
+                            Adaptive Focus Practice
+                        </span>
+
+                        <strong id="focusQuestionCounter">
+                            Question 1 of 5
+                        </strong>
+
+                    </div>
+
+
+                    <span
+                        class="focus-priority-badge"
+                        id="focusPriorityBadge"
+                    >
+                        Priority Topic
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="quiz-progress-bar">
+
+                    <div
+                        class="quiz-progress-fill"
+                        id="focusProgressFill"
+                    >
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUESTION META -->
+
+                <div class="challenge-question-meta">
+
+
+                    <span
+                        class="question-level"
+                        id="focusQuestionLevel"
+                    >
+                        Analyzing
+                    </span>
+
+
+                    <span
+                        class="challenge-topic-badge"
+                        id="focusQuestionTopic"
+                    >
+                        Topic
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- QUESTION -->
+
+                <h2
+                    class="quiz-question"
+                    id="focusQuestionText"
+                >
+                    Loading question...
+                </h2>
+
+
+
+                <!-- OPTIONS -->
+
+                <div
+                    class="answer-options"
+                    id="focusAnswerOptions"
+                >
+                </div>
+
+
+
+                <!-- CONTROLS -->
+
+                <div class="quiz-controls">
+
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="focusPreviousButton"
+                    >
+                        Previous
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="focusNextButton"
+                    >
+                        Next Question
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RESULTS
+            ================================================== -->
+
+            <section
+                class="quiz-result-card hidden"
+                id="focusResultCard"
+            >
+
+
+                <div class="result-icon">
+                    🎯
+                </div>
+
+
+                <span class="section-label">
+                    Focus Practice Completed
+                </span>
+
+
+                <h2>
+                    Your Result
+                </h2>
+
+
+
+                <div class="score-display">
+
+                    <strong id="focusFinalScore">
+                        0/5
+                    </strong>
+
+                    <span id="focusFinalPercentage">
+                        0%
+                    </span>
+
+                </div>
+
+
+
+                <p
+                    class="result-message"
+                    id="focusResultMessage"
+                >
+                </p>
+
+
+
+                <div class="result-summary">
+
+
+                    <div class="result-summary-item">
+
+                        <span>
+                            Correct
+                        </span>
+
+                        <strong id="focusCorrect">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-summary-item">
+
+                        <span>
+                            Incorrect
+                        </span>
+
+                        <strong id="focusIncorrect">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-summary-item">
+
+                        <span>
+                            Priority Topic
+                        </span>
+
+                        <strong
+                            class="focus-result-topic"
+                            id="focusResultTopic"
+                        >
+                            -
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="result-actions">
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="focusReviewButton"
+                    >
+                        Review My Answers
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="focusAgainButton"
+                    >
+                        Practice Again
+                    </button>
+
+
+                    <a
+                        href="progress.html"
+                        class="secondary-btn"
+                    >
+                        View Progress
+                    </a>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ANSWER REVIEW
+            ================================================== -->
+
+            <section
+                class="answer-review-section hidden"
+                id="focusReviewSection"
+            >
+
+
+                <div class="review-header">
+
+
+                    <div>
+
+                        <span class="section-label">
+                            Focus Practice Review
+                        </span>
+
+                        <h2>
+                            Review Your Answers
+                        </h2>
+
+                        <p>
+
+                            Study the items you missed before
+                            starting another Focus Practice.
+
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="focusBackResultButton"
+                    >
+                        ← Back to Result
+                    </button>
+
+
+                </div>
+
+
+
+                <div class="review-summary-card">
+
+
+                    <div class="review-summary-item">
+
+                        <span>
+                            Priority Topic
+                        </span>
+
+                        <strong id="focusReviewTopic">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="review-summary-item">
+
+                        <span>
+                            Score
+                        </span>
+
+                        <strong id="focusReviewScore">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="review-summary-item">
+
+                        <span>
+                            Accuracy
+                        </span>
+
+                        <strong id="focusReviewAccuracy">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div
+                    class="answer-review-list"
+                    id="focusReviewList"
+                >
+                </div>
+
+
+
+                <div class="review-bottom-actions">
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="focusReviewAgainButton"
+                    >
+                        Practice Again
+                    </button>
+
+
+                    <a
+                        href="progress.html"
+                        class="secondary-btn"
+                    >
+                        View Progress
+                    </a>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                Philippine Governance Learning Hub
+            </p>
+
+            <small>
+                TOS-Based Learning and Review Website
+            </small>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="json.js"></script>
+
+    <script src="progress.js"></script>
+
+    <script src="focus.js"></script>
+
+    <script src="pwa.js"></script>
+
+    <script src="site-ui.js"></script>
+
+
+</body>
+
+</html>

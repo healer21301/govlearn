@@ -1,0 +1,5851 @@
+/* =========================================================
+   GOVLEARN
+   COMPLETE WEBSITE STYLESHEET
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f5f7fb;
+
+    color: #1f2937;
+
+    line-height: 1.6;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+/* =========================================================
+   GLOBAL BUTTONS
+========================================================= */
+
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 12px 24px;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s,
+        color 0.2s,
+        border-color 0.2s,
+        transform 0.2s;
+}
+
+
+.primary-btn {
+    background: #173f7a;
+
+    border: 2px solid #173f7a;
+
+    color: #ffffff;
+}
+
+
+.primary-btn:hover {
+    background: #123466;
+
+    border-color: #123466;
+
+    transform: translateY(-1px);
+}
+
+
+.secondary-btn {
+    background: #ffffff;
+
+    border: 2px solid #173f7a;
+
+    color: #173f7a;
+}
+
+
+.secondary-btn:hover {
+    background: #eef5ff;
+
+    transform: translateY(-1px);
+}
+
+
+button:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+
+    transform: none !important;
+}
+
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.main-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.nav-container {
+    min-height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.logo-icon {
+    font-size: 30px;
+}
+
+
+.logo h2 {
+    color: #173b73;
+
+    line-height: 1.1;
+}
+
+
+.logo small {
+    color: #6b7280;
+}
+
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+nav a {
+    text-decoration: none;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: color 0.2s;
+}
+
+
+nav a:hover {
+    color: #2563eb;
+}
+
+
+.assistant-btn {
+    padding: 11px 17px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #173b73;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    padding: 90px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef5ff,
+            #ffffff
+        );
+}
+
+
+.hero-content {
+    display: grid;
+
+    grid-template-columns:
+        1.3fr
+        0.7fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.tag {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    padding: 7px 14px;
+
+    background: #dbeafe;
+
+    border-radius: 20px;
+
+    color: #1d4ed8;
+
+    font-weight: 700;
+}
+
+
+.hero h1 {
+    margin-bottom: 20px;
+
+    color: #132f5b;
+
+    font-size: 55px;
+
+    line-height: 1.1;
+}
+
+
+.hero-text p {
+    max-width: 680px;
+
+    margin-bottom: 30px;
+
+    color: #5b6472;
+
+    font-size: 18px;
+}
+
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+
+/* =========================================================
+   HERO JOURNEY CARD
+========================================================= */
+
+.hero-card {
+    padding: 35px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+.card-icon {
+    margin-bottom: 15px;
+
+    font-size: 40px;
+}
+
+
+.hero-card h3 {
+    margin-bottom: 25px;
+
+    color: #173b73;
+}
+
+
+.journey-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.journey-item span {
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f0fe;
+
+    border-radius: 50%;
+
+    color: #173b73;
+
+    font-weight: 700;
+}
+
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.topics-section,
+.modes-section,
+.progress-section,
+.assessments-section {
+    padding: 80px 0;
+}
+
+
+.section-heading {
+    margin-bottom: 45px;
+
+    text-align: center;
+}
+
+
+.section-label {
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.section-heading h2,
+.progress-section h2 {
+    margin-top: 8px;
+
+    color: #132f5b;
+
+    font-size: 36px;
+}
+
+
+.section-heading p {
+    margin-top: 8px;
+
+    color: #6b7280;
+}
+
+
+
+/* =========================================================
+   TOPICS
+========================================================= */
+
+.topic-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.topic-card {
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+
+.topic-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+.topic-number {
+    margin-bottom: 12px;
+
+    color: #2563eb;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.topic-card h3 {
+    margin-bottom: 12px;
+
+    color: #173b73;
+}
+
+
+.topic-card p {
+    margin-bottom: 22px;
+
+    color: #6b7280;
+}
+
+
+.topic-btn {
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #2563eb;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+
+/* =========================================================
+   LEARNING MODES
+========================================================= */
+
+.modes-section {
+    background: #eef3fa;
+}
+
+
+.mode-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.mode-card {
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+
+.mode-icon {
+    margin-bottom: 15px;
+
+    font-size: 40px;
+}
+
+
+.mode-card h3 {
+    margin-bottom: 10px;
+
+    color: #173b73;
+}
+
+
+.mode-card p {
+    color: #6b7280;
+}
+
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress-container {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+.progress-container > div > p {
+    margin-top: 15px;
+
+    color: #6b7280;
+}
+
+
+.progress-card {
+    padding: 40px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+
+.progress-placeholder {
+    margin-bottom: 15px;
+
+    font-size: 55px;
+}
+
+
+.progress-card h3 {
+    color: #173b73;
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 30px;
+
+    background: #102b52;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+footer small {
+    color: #b8c5d8;
+}
+
+
+
+/* =========================================================
+   TOPIC / LESSON PAGE
+========================================================= */
+
+.topic-hero {
+    padding: 65px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf2ff,
+            #ffffff
+        );
+}
+
+
+.back-link {
+    display: inline-block;
+
+    margin-bottom: 30px;
+
+    color: #2563eb;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+.topic-hero-content {
+    max-width: 850px;
+}
+
+
+.topic-hero h1 {
+    margin-top: 10px;
+
+    margin-bottom: 18px;
+
+    color: #132f5b;
+
+    font-size: 44px;
+
+    line-height: 1.15;
+}
+
+
+.topic-hero p {
+    max-width: 800px;
+
+    color: #5b6472;
+
+    font-size: 18px;
+}
+
+
+.topic-learning-section {
+    padding: 70px 0;
+}
+
+
+.topic-page-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(280px, 0.8fr);
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+
+
+/* =========================================================
+   LEARNING COMPETENCY BOX
+========================================================= */
+
+.learning-box {
+    margin-bottom: 30px;
+
+    padding: 30px;
+
+    background: #eef5ff;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 12px;
+}
+
+
+.content-label {
+    display: inline-block;
+
+    margin-bottom: 6px;
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.learning-box h2 {
+    margin-bottom: 10px;
+
+    color: #173b73;
+}
+
+
+.learning-box p {
+    color: #4b5563;
+}
+
+
+
+/* =========================================================
+   LESSON BLOCK
+========================================================= */
+
+.lesson-block {
+    display: flex;
+
+    gap: 22px;
+
+    margin-bottom: 25px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+}
+
+
+.lesson-icon {
+    width: 55px;
+    min-width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf2ff;
+
+    border-radius: 12px;
+
+    font-size: 28px;
+}
+
+
+.lesson-block h2 {
+    margin-bottom: 12px;
+
+    color: #173b73;
+}
+
+
+.lesson-block p {
+    color: #626b79;
+}
+
+
+.full-width {
+    width: 100%;
+}
+
+
+
+/* =========================================================
+   CONCEPT CARDS
+========================================================= */
+
+.concept-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+
+    margin-top: 25px;
+}
+
+
+.concept-card {
+    padding: 22px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+
+.concept-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+.concept-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+
+.concept-number {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #173b73;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.concept-heading h3 {
+    color: #173b73;
+
+    font-size: 18px;
+}
+
+
+.concept-definition {
+    margin-bottom: 14px;
+
+    color: #4b5563;
+}
+
+
+.concept-example {
+    padding: 12px 15px;
+
+    background: #eef5ff;
+
+    border-radius: 8px;
+
+    color: #45556c;
+
+    font-size: 14px;
+}
+
+
+.concept-example strong {
+    color: #173b73;
+}
+
+
+
+/* =========================================================
+   ANALYSIS SCENARIO
+========================================================= */
+
+.analysis-lesson {
+    border-left: 4px solid #2563eb;
+}
+
+
+.scenario-box {
+    margin-top: 20px;
+
+    padding: 25px;
+
+    background: #f8fbff;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 12px;
+}
+
+
+.scenario-text {
+    margin-bottom: 20px;
+
+    color: #374151;
+
+    font-size: 16px;
+}
+
+
+.scenario-box h4 {
+    margin-bottom: 7px;
+
+    color: #173b73;
+}
+
+
+.scenario-box > p {
+    margin-bottom: 18px;
+}
+
+
+.guide-box {
+    padding: 15px;
+
+    background: #eaf2ff;
+
+    border-radius: 8px;
+
+    color: #45556c;
+}
+
+
+.guide-box strong {
+    color: #173b73;
+}
+
+
+
+/* =========================================================
+   KEY TAKEAWAYS
+========================================================= */
+
+.takeaway-list {
+    margin-top: 20px;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.takeaway-list li {
+    position: relative;
+
+    margin-bottom: 10px;
+
+    padding:
+        14px
+        15px
+        14px
+        45px;
+
+    background: #f8fafc;
+
+    border-radius: 9px;
+
+    color: #4b5563;
+}
+
+
+.takeaway-list li::before {
+    content: "✓";
+
+    position: absolute;
+
+    top: 13px;
+
+    left: 16px;
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #dbeafe;
+
+    border-radius: 50%;
+
+    color: #1d4ed8;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+
+/* =========================================================
+   TOPIC SIDEBAR
+========================================================= */
+
+.topic-sidebar {
+    position: sticky;
+
+    top: 100px;
+}
+
+
+.sidebar-card {
+    margin-bottom: 22px;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+}
+
+
+.sidebar-card h3 {
+    margin-bottom: 22px;
+
+    color: #173b73;
+}
+
+
+.topic-stat {
+    padding: 15px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.topic-stat:last-child {
+    border-bottom: none;
+}
+
+
+.topic-stat > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.topic-stat strong {
+    color: #173b73;
+
+    font-size: 22px;
+}
+
+
+.cognitive-badges {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+.cognitive-badge {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    background: #eaf2ff;
+
+    border-radius: 20px;
+
+    color: #1d4ed8;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================================================
+   LEARNING PATH
+========================================================= */
+
+.learning-path-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+.learning-path-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.learning-path-item > span {
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #edf0f4;
+
+    border-radius: 50%;
+
+    color: #6b7280;
+
+    font-weight: 700;
+}
+
+
+.learning-path-item.active > span {
+    background: #173b73;
+
+    color: #ffffff;
+}
+
+
+.learning-path-item strong {
+    display: block;
+
+    color: #374151;
+}
+
+
+.learning-path-item small {
+    color: #8a929e;
+}
+
+
+.learning-actions {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+
+/* =========================================================
+   PRACTICE QUIZ PAGE
+========================================================= */
+
+.quiz-page {
+    min-height: 80vh;
+
+    padding: 60px 0 90px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #eef5ff 0%,
+            #f5f7fb 360px
+        );
+}
+
+
+.quiz-container {
+    max-width: 900px;
+}
+
+
+.quiz-header-card {
+    margin-bottom: 25px;
+}
+
+
+.quiz-header-card h1 {
+    margin-top: 8px;
+
+    margin-bottom: 10px;
+
+    color: #132f5b;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+}
+
+
+.quiz-header-card p {
+    max-width: 700px;
+
+    color: #667085;
+}
+
+
+.quiz-tos-info {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 9px 14px;
+
+    background: #eaf2ff;
+
+    border: 1px solid #d6e5ff;
+
+    border-radius: 8px;
+
+    color: #315b96;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================================================
+   ACTIVE QUIZ CARD
+========================================================= */
+
+.quiz-card {
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(15, 35, 70, 0.07);
+}
+
+
+
+/* =========================================================
+   QUIZ PROGRESS
+========================================================= */
+
+.quiz-progress-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 10px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.quiz-progress-bar {
+    width: 100%;
+
+    height: 8px;
+
+    margin-bottom: 30px;
+
+    overflow: hidden;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+}
+
+
+.quiz-progress-fill {
+    width: 0;
+
+    height: 100%;
+
+    background: #2563eb;
+
+    border-radius: 20px;
+
+    transition: width 0.3s ease;
+}
+
+
+
+/* =========================================================
+   QUIZ QUESTION
+========================================================= */
+
+.question-meta {
+    margin-bottom: 15px;
+}
+
+
+.question-level {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    background: #eaf2ff;
+
+    border-radius: 20px;
+
+    color: #1d4ed8;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.quiz-question {
+    margin-bottom: 28px;
+
+    color: #172b4d;
+
+    font-size: 25px;
+
+    line-height: 1.45;
+}
+
+
+
+/* =========================================================
+   ANSWER OPTIONS
+========================================================= */
+
+.answer-options {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+.answer-option {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 17px;
+
+    background: #ffffff;
+
+    border: 2px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    color: #374151;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    text-align: left;
+
+    transition:
+        background 0.2s,
+        border-color 0.2s,
+        transform 0.2s;
+}
+
+
+.answer-option:hover {
+    background: #f8fbff;
+
+    border-color: #93b4ea;
+
+    transform: translateY(-1px);
+}
+
+
+.answer-option.selected {
+    background: #eef5ff;
+
+    border-color: #2563eb;
+}
+
+
+.option-letter {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eef2f7;
+
+    border-radius: 9px;
+
+    color: #173b73;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+
+
+.answer-option.selected .option-letter {
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+
+.option-text {
+    flex: 1;
+}
+
+
+
+/* =========================================================
+   QUIZ CONTROLS
+========================================================= */
+
+.quiz-controls {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+
+/* =========================================================
+   QUIZ RESULT
+========================================================= */
+
+.quiz-result-card {
+    padding: 45px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(15, 35, 70, 0.07);
+
+    text-align: center;
+}
+
+
+.result-icon {
+    margin-bottom: 10px;
+
+    font-size: 52px;
+}
+
+
+.quiz-result-card h2 {
+    margin-top: 7px;
+
+    margin-bottom: 25px;
+
+    color: #173b73;
+
+    font-size: 32px;
+}
+
+
+.score-display {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.score-display strong {
+    color: #173b73;
+
+    font-size: 52px;
+
+    line-height: 1;
+}
+
+
+.score-display span {
+    margin-top: 10px;
+
+    color: #2563eb;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+.result-message {
+    max-width: 600px;
+
+    margin:
+        0
+        auto
+        30px;
+
+    color: #667085;
+}
+
+
+
+/* =========================================================
+   RESULT SUMMARY
+========================================================= */
+
+.result-summary {
+    max-width: 600px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin:
+        0
+        auto
+        35px;
+}
+
+
+.result-summary-item {
+    padding: 20px;
+
+    background: #f8fafc;
+
+    border-radius: 12px;
+}
+
+
+.result-summary-item span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #667085;
+
+    font-size: 13px;
+}
+
+
+.result-summary-item strong {
+    color: #173b73;
+
+    font-size: 24px;
+}
+
+
+.result-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.result-note {
+    margin-top: 25px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+
+/* =========================================================
+   ANSWER REVIEW
+========================================================= */
+
+.answer-review-section {
+    width: 100%;
+}
+
+
+.review-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+.review-header h2 {
+    margin-top: 5px;
+
+    margin-bottom: 7px;
+
+    color: #173b73;
+
+    font-size: 32px;
+}
+
+
+.review-header p {
+    color: #667085;
+}
+
+
+
+/* =========================================================
+   REVIEW SUMMARY
+========================================================= */
+
+.review-summary-card {
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15, 35, 70, 0.04);
+}
+
+
+.review-summary-item {
+    padding: 15px;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+}
+
+
+.review-summary-item span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+    text-transform: uppercase;
+}
+
+
+.review-summary-item strong {
+    display: block;
+
+    color: #173b73;
+
+    font-size: 17px;
+
+    line-height: 1.4;
+}
+
+
+
+/* =========================================================
+   REVIEW QUESTION LIST
+========================================================= */
+
+.answer-review-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+.review-question-card {
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15, 35, 70, 0.04);
+}
+
+
+.correct-review {
+    border-left: 5px solid #22a06b;
+}
+
+
+.incorrect-review {
+    border-left: 5px solid #dc4c4c;
+}
+
+
+
+/* =========================================================
+   REVIEW QUESTION HEADER
+========================================================= */
+
+.review-question-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.review-question-number {
+    margin-right: 8px;
+
+    color: #173b73;
+
+    font-weight: 700;
+}
+
+
+.review-level-badge {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    background: #eef5ff;
+
+    border-radius: 20px;
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.review-status {
+    display: inline-block;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.correct-status {
+    background: #e8f7ef;
+
+    color: #18794e;
+}
+
+
+.incorrect-status {
+    background: #fff0f0;
+
+    color: #c43535;
+}
+
+
+.review-question-text {
+    margin-bottom: 22px;
+
+    color: #27364b;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+}
+
+
+
+/* =========================================================
+   REVIEW ANSWER COMPARISON
+========================================================= */
+
+.review-answer-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.review-answer-box {
+    padding: 18px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+}
+
+
+.review-box-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+    text-transform: uppercase;
+}
+
+
+.review-answer-box strong {
+    display: block;
+
+    line-height: 1.5;
+}
+
+
+.student-correct {
+    background: #f0faf5;
+
+    border-color: #b7e4cd;
+
+    color: #176b46;
+}
+
+
+.student-incorrect {
+    background: #fff4f4;
+
+    border-color: #f3c2c2;
+
+    color: #b73b3b;
+}
+
+
+.correct-answer-box {
+    background: #eef5ff;
+
+    border-color: #c9dcfb;
+
+    color: #174f99;
+}
+
+
+
+/* =========================================================
+   ANSWER EXPLANATION
+========================================================= */
+
+.answer-explanation {
+    display: flex;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    background: #fffbea;
+
+    border: 1px solid #f4e7aa;
+
+    border-radius: 10px;
+}
+
+
+.explanation-icon {
+    flex-shrink: 0;
+
+    font-size: 23px;
+}
+
+
+.answer-explanation p {
+    color: #5d5640;
+
+    line-height: 1.6;
+}
+
+
+.review-bottom-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+}
+
+
+
+/* =========================================================
+   ASSESSMENT CENTER
+========================================================= */
+
+.assessments-section {
+    padding: 80px 0;
+
+    background: #ffffff;
+}
+
+
+.assessment-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+.assessment-card {
+    min-height: 310px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 30px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+
+.assessment-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(15, 35, 70, 0.08);
+}
+
+
+.assessment-icon {
+    margin-bottom: 18px;
+
+    font-size: 38px;
+}
+
+
+.assessment-card h3 {
+    margin-bottom: 10px;
+
+    color: #173b73;
+}
+
+
+.assessment-card p {
+    margin-bottom: 18px;
+
+    color: #667085;
+}
+
+
+.assessment-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 24px;
+}
+
+
+.assessment-meta span {
+    padding: 6px 10px;
+
+    background: #eaf2ff;
+
+    border-radius: 20px;
+
+    color: #1d4ed8;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.assessment-link {
+    display: inline-flex;
+
+    margin-top: auto;
+
+    text-align: center;
+
+    text-decoration: none;
+}
+
+
+
+/* =========================================================
+   OFFICIAL QUIZ / EXAM PRACTICE
+========================================================= */
+
+.assessment-section-heading {
+    margin-bottom: 25px;
+
+    padding: 16px 18px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+}
+
+
+.assessment-section-heading span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #173b73;
+
+    font-weight: 700;
+}
+
+
+.assessment-section-heading small {
+    color: #667085;
+}
+
+
+.assessment-key-note {
+    margin-top: 20px;
+
+    padding: 14px 16px;
+
+    background: #fff7ed;
+
+    border: 1px solid #fed7aa;
+
+    border-radius: 10px;
+
+    color: #9a3412;
+
+    font-size: 13px;
+}
+
+
+.matching-answer-wrapper {
+    padding: 18px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+}
+
+
+.matching-answer-wrapper label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #173b73;
+
+    font-weight: 700;
+}
+
+
+.matching-select {
+    width: 100%;
+
+    padding: 14px;
+
+    background: #ffffff;
+
+    border: 2px solid #dbe3ed;
+
+    border-radius: 10px;
+
+    color: #374151;
+
+    font-size: 15px;
+}
+
+
+.matching-select:focus {
+    outline: none;
+
+    border-color: #2563eb;
+}
+
+
+.matching-bank {
+    margin-top: 18px;
+
+    padding: 18px;
+
+    background: #eef5ff;
+
+    border-radius: 12px;
+}
+
+
+.matching-bank > strong {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #173b73;
+}
+
+
+.matching-bank-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 8px;
+}
+
+
+.matching-bank-grid span {
+    padding: 8px 10px;
+
+    background: #ffffff;
+
+    border-radius: 7px;
+
+    color: #475569;
+
+    font-size: 12px;
+}
+
+
+.tf-letter {
+    font-size: 12px;
+}
+
+
+
+/* =========================================================
+   TABLET RESPONSIVENESS
+========================================================= */
+
+@media (max-width: 900px) {
+
+
+    .hero-content,
+    .progress-container,
+    .topic-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .topic-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .mode-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .assessment-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    .topic-sidebar {
+        position: static;
+    }
+
+
+    .topic-hero h1 {
+        font-size: 36px;
+    }
+
+
+    .review-summary-card {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE RESPONSIVENESS
+========================================================= */
+
+@media (max-width: 700px) {
+
+
+    .container {
+        width: 92%;
+    }
+
+
+    nav {
+        gap: 10px;
+    }
+
+
+    nav a {
+        display: none;
+    }
+
+
+    .logo small {
+        display: none;
+    }
+
+
+    .hero {
+        padding: 60px 0;
+    }
+
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+
+    .hero-buttons button {
+        width: 100%;
+    }
+
+
+    .topic-grid,
+    .mode-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .topic-hero {
+        padding: 45px 0;
+    }
+
+
+    .topic-hero h1 {
+        font-size: 30px;
+    }
+
+
+    .lesson-block {
+        flex-direction: column;
+
+        padding: 22px;
+    }
+
+
+    .learning-actions {
+        flex-direction: column;
+    }
+
+
+    .learning-actions button {
+        width: 100%;
+    }
+
+
+    /* QUIZ */
+
+    .quiz-page {
+        padding: 40px 0 70px;
+    }
+
+
+    .quiz-header-card h1 {
+        font-size: 30px;
+    }
+
+
+    .quiz-card,
+    .quiz-result-card {
+        padding: 22px;
+    }
+
+
+    .quiz-question {
+        font-size: 21px;
+    }
+
+
+    .quiz-progress-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+
+    .quiz-controls {
+        flex-direction: column-reverse;
+    }
+
+
+    .quiz-controls button {
+        width: 100%;
+    }
+
+
+    .result-summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .result-actions {
+        flex-direction: column;
+    }
+
+
+    .result-actions button {
+        width: 100%;
+    }
+
+
+    .score-display strong {
+        font-size: 44px;
+    }
+
+
+    /* REVIEW */
+
+    .review-header {
+        flex-direction: column;
+    }
+
+
+    .review-header button {
+        width: 100%;
+    }
+
+
+    .review-answer-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .review-question-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .review-question-card {
+        padding: 20px;
+    }
+
+
+    .review-bottom-actions {
+        flex-direction: column;
+    }
+
+
+    .review-bottom-actions button {
+        width: 100%;
+    }
+
+
+    /* MATCHING */
+
+    .matching-bank-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================================
+   STEP 7 - TIMED CHALLENGE
+========================================================= */
+
+
+/* =========================================================
+   START SCREEN
+========================================================= */
+
+.challenge-start-card {
+    padding: 45px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(15, 35, 70, 0.07);
+
+    text-align: center;
+}
+
+
+.challenge-start-icon {
+    margin-bottom: 10px;
+
+    font-size: 55px;
+}
+
+
+.challenge-start-card h1 {
+    max-width: 700px;
+
+    margin:
+        10px
+        auto
+        15px;
+
+    color: #173b73;
+
+    font-size: 36px;
+
+    line-height: 1.2;
+}
+
+
+.challenge-description {
+    max-width: 650px;
+
+    margin:
+        0
+        auto
+        30px;
+
+    color: #667085;
+
+    font-size: 16px;
+}
+
+
+
+/* =========================================================
+   CHALLENGE RULES
+========================================================= */
+
+.challenge-rules {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.challenge-rule {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 20px 12px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+}
+
+
+.challenge-rule > span {
+    font-size: 28px;
+}
+
+
+.challenge-rule strong {
+    display: block;
+
+    color: #173b73;
+}
+
+
+.challenge-rule small {
+    display: block;
+
+    color: #64748b;
+}
+
+
+
+/* =========================================================
+   DISTRIBUTION
+========================================================= */
+
+.challenge-distribution {
+    max-width: 700px;
+
+    margin:
+        0
+        auto
+        20px;
+
+    padding: 18px;
+
+    background: #eef5ff;
+
+    border: 1px solid #cfe0fb;
+
+    border-radius: 12px;
+}
+
+
+.challenge-distribution > strong {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #173b73;
+}
+
+
+.challenge-distribution div {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.challenge-distribution span {
+    padding: 6px 10px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    color: #315b96;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================================================
+   WARNING
+========================================================= */
+
+.challenge-warning {
+    max-width: 700px;
+
+    margin:
+        0
+        auto
+        25px;
+
+    padding: 15px;
+
+    background: #fffbea;
+
+    border: 1px solid #f3e3a1;
+
+    border-radius: 10px;
+
+    color: #665b31;
+
+    font-size: 14px;
+}
+
+
+.challenge-start-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+
+/* =========================================================
+   ACTIVE CHALLENGE TOP
+========================================================= */
+
+.challenge-top-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+}
+
+
+.challenge-top-row > div:first-child {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.challenge-mode-label {
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+
+#challengeQuestionCounter {
+    color: #64748b;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================================================
+   TIMER
+========================================================= */
+
+.timer-box {
+    min-width: 135px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 15px;
+
+    background: #eef5ff;
+
+    border: 2px solid #cfe0fb;
+
+    border-radius: 12px;
+
+    transition:
+        background 0.25s,
+        border-color 0.25s;
+}
+
+
+.timer-icon {
+    font-size: 23px;
+}
+
+
+.timer-box small {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+.timer-box strong {
+    display: block;
+
+    color: #173b73;
+
+    font-size: 22px;
+}
+
+
+.timer-box.timer-warning {
+    background: #fff8e7;
+
+    border-color: #f0cf77;
+}
+
+
+.timer-box.timer-warning strong {
+    color: #a16207;
+}
+
+
+.timer-box.timer-danger {
+    background: #fff0f0;
+
+    border-color: #efa6a6;
+}
+
+
+.timer-box.timer-danger strong {
+    color: #c43535;
+}
+
+
+
+/* =========================================================
+   TIMER PROGRESS
+========================================================= */
+
+.timer-progress {
+    width: 100%;
+
+    height: 7px;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+}
+
+
+.timer-progress-fill {
+    width: 100%;
+
+    height: 100%;
+
+    background: #2563eb;
+
+    border-radius: 20px;
+
+    transition:
+        width 1s linear;
+}
+
+
+
+/* =========================================================
+   QUESTION META
+========================================================= */
+
+.challenge-question-meta {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+.challenge-topic-badge {
+    display: inline-block;
+
+    max-width: 100%;
+
+    padding: 7px 12px;
+
+    background: #f1f5f9;
+
+    border-radius: 20px;
+
+    color: #475569;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================================================
+   CHALLENGE CONTROLS
+========================================================= */
+
+.challenge-controls {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 30px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+#challengeAnsweredCounter {
+    color: #64748b;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================================================
+   CHALLENGE MESSAGE
+========================================================= */
+
+.challenge-message {
+    margin-top: 20px;
+
+    padding: 13px 15px;
+
+    background: #fff5f5;
+
+    border: 1px solid #f4c2c2;
+
+    border-radius: 9px;
+
+    color: #b33a3a;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================================================
+   REVIEW
+========================================================= */
+
+.challenge-review-topic {
+    display: inline-block;
+
+    margin-left: 7px;
+
+    padding: 5px 9px;
+
+    background: #f1f5f9;
+
+    border-radius: 20px;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+.expired-status {
+    background: #fff4df;
+
+    color: #a16207;
+}
+
+
+
+/* =========================================================
+   CHALLENGE TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .challenge-rules {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+
+/* =========================================================
+   CHALLENGE MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .challenge-start-card {
+        padding: 25px;
+    }
+
+
+    .challenge-start-card h1 {
+        font-size: 29px;
+    }
+
+
+    .challenge-rules {
+        grid-template-columns: 1fr;
+    }
+
+
+    .challenge-start-actions {
+        flex-direction: column;
+    }
+
+
+    .challenge-start-actions a,
+    .challenge-start-actions button {
+        width: 100%;
+    }
+
+
+    .challenge-top-row {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .timer-box {
+        justify-content: center;
+
+        width: 100%;
+    }
+
+
+    .challenge-controls {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .challenge-controls button {
+        width: 100%;
+    }
+
+
+    .challenge-review-topic {
+        display: block;
+
+        width: fit-content;
+
+        margin:
+            7px
+            0
+            0;
+    }
+
+}
+
+
+/* =========================================================
+   STEP 8 - PROGRESS TRACKING
+========================================================= */
+
+
+/* =========================================================
+   PROGRESS PAGE
+========================================================= */
+
+.progress-page {
+    min-height: 80vh;
+
+    padding: 70px 0 90px;
+
+    background: #f5f7fb;
+}
+
+
+.progress-page-header {
+    margin-bottom: 35px;
+}
+
+
+.progress-page-header h1 {
+    margin-top: 5px;
+
+    color: #173b73;
+
+    font-size: 42px;
+}
+
+
+.progress-page-header p {
+    max-width: 700px;
+
+    margin-top: 8px;
+
+    color: #667085;
+}
+
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.progress-empty-card {
+    padding: 55px 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+
+.progress-empty-card > div {
+    margin-bottom: 10px;
+
+    font-size: 55px;
+}
+
+
+.progress-empty-card h2 {
+    margin-bottom: 8px;
+
+    color: #173b73;
+}
+
+
+.progress-empty-card p {
+    max-width: 500px;
+
+    margin:
+        0
+        auto
+        25px;
+
+    color: #667085;
+}
+
+
+
+/* =========================================================
+   OVERALL STATISTICS
+========================================================= */
+
+.progress-stat-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+.progress-stat-card {
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+}
+
+
+.progress-stat-card span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.progress-stat-card strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #173b73;
+
+    font-size: 34px;
+}
+
+
+.progress-stat-card small {
+    color: #94a3b8;
+}
+
+
+
+/* =========================================================
+   PROGRESS PANEL
+========================================================= */
+
+.progress-panel {
+    margin-bottom: 30px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+}
+
+
+.progress-panel-header {
+    margin-bottom: 22px;
+}
+
+
+.progress-panel-header h2 {
+    margin-top: 4px;
+
+    color: #173b73;
+
+    font-size: 27px;
+}
+
+
+
+/* =========================================================
+   TOPIC PROGRESS
+========================================================= */
+
+.topic-progress-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.topic-progress-card {
+    padding: 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+}
+
+
+.topic-progress-main {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 13px;
+}
+
+
+.topic-progress-info h3 {
+    margin-bottom: 6px;
+
+    color: #27364b;
+
+    font-size: 16px;
+}
+
+
+.topic-progress-info > span {
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+.topic-progress-details {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.topic-progress-details span {
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+.mastery-display {
+    flex-shrink: 0;
+
+    text-align: right;
+}
+
+
+.mastery-display strong {
+    display: block;
+
+    color: #173b73;
+
+    font-size: 27px;
+}
+
+
+.mastery-display span {
+    display: inline-block;
+
+    margin-top: 4px;
+
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+
+/* =========================================================
+   MASTERY STATUS
+========================================================= */
+
+.mastery-high {
+    background: #e8f7ef;
+
+    color: #18794e;
+}
+
+
+.mastery-good {
+    background: #eaf2ff;
+
+    color: #1d4ed8;
+}
+
+
+.mastery-review {
+    background: #fff8e7;
+
+    color: #a16207;
+}
+
+
+.mastery-focus {
+    background: #fff0f0;
+
+    color: #c43535;
+}
+
+
+
+/* =========================================================
+   MASTERY BAR
+========================================================= */
+
+.mastery-progress-bar {
+    width: 100%;
+
+    height: 7px;
+
+    overflow: hidden;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+}
+
+
+.mastery-progress-fill {
+    height: 100%;
+
+    background: #2563eb;
+
+    border-radius: 20px;
+}
+
+
+
+/* =========================================================
+   MOMENTUM
+========================================================= */
+
+.momentum-up {
+    color: #18794e !important;
+
+    font-weight: 700;
+}
+
+
+.momentum-down {
+    color: #c43535 !important;
+
+    font-weight: 700;
+}
+
+
+.momentum-same {
+    color: #64748b !important;
+}
+
+
+
+/* =========================================================
+   ATTEMPT HISTORY
+========================================================= */
+
+.attempt-history-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.attempt-history-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 18px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 11px;
+}
+
+
+.attempt-type {
+    display: inline-block;
+
+    margin-bottom: 4px;
+
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.attempt-history-info h3 {
+    margin-bottom: 3px;
+
+    color: #27364b;
+
+    font-size: 15px;
+}
+
+
+.attempt-history-info small {
+    color: #94a3b8;
+}
+
+
+.attempt-history-score {
+    flex-shrink: 0;
+
+    text-align: right;
+}
+
+
+.attempt-history-score strong {
+    display: block;
+
+    color: #173b73;
+
+    font-size: 20px;
+}
+
+
+.attempt-history-score span {
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+
+/* =========================================================
+   RESET PROGRESS
+========================================================= */
+
+.progress-reset-section {
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #e5e7eb;
+
+    text-align: center;
+}
+
+
+.progress-reset-section p {
+    margin-bottom: 12px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+.progress-reset-btn {
+    padding: 9px 14px;
+
+    background: transparent;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    color: #64748b;
+
+    cursor: pointer;
+}
+
+
+.progress-reset-btn:hover {
+    border-color: #dc4c4c;
+
+    color: #dc4c4c;
+}
+
+
+
+/* =========================================================
+   PROGRESS TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .progress-stat-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+
+/* =========================================================
+   PROGRESS MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .progress-page {
+        padding: 45px 0 70px;
+    }
+
+
+    .progress-page-header h1 {
+        font-size: 34px;
+    }
+
+
+    .progress-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .progress-panel {
+        padding: 20px;
+    }
+
+
+    .topic-progress-main {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .mastery-display {
+        text-align: left;
+    }
+
+
+    .attempt-history-item {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .attempt-history-score {
+        text-align: left;
+    }
+
+}
+
+.home-progress-button {
+    margin-top: 22px;
+}
+
+/* =========================================================
+   CRITICAL VISIBILITY CLASS
+
+   KEEP THIS AT THE VERY BOTTOM.
+========================================================= */
+
+/* =========================================================
+   STEP 9 - LEARNING ANALYSIS
+========================================================= */
+
+
+.analysis-description {
+    margin-top: 8px;
+
+    color: #667085;
+
+    font-size: 14px;
+}
+
+
+
+/* =========================================================
+   MAIN ANALYSIS GRID
+========================================================= */
+
+.learning-analysis-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+.analysis-card {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 24px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+}
+
+
+.analysis-card-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+}
+
+
+.analysis-card h3 {
+    margin-bottom: 12px;
+
+    color: #27364b;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+}
+
+
+.analysis-percentage {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #173b73;
+
+    font-size: 35px;
+}
+
+
+.analysis-card p {
+    margin-bottom: 18px;
+
+    color: #667085;
+
+    font-size: 13px;
+}
+
+
+.analysis-action {
+    width: fit-content;
+
+    margin-top: auto;
+}
+
+
+
+/* =========================================================
+   PRIORITY / STRONG CARDS
+========================================================= */
+
+.focus-analysis-card {
+    background: #fff8f8;
+
+    border-color: #f2cccc;
+
+    border-top: 4px solid #dc4c4c;
+}
+
+
+.strong-analysis-card {
+    background: #f1faf5;
+
+    border-color: #cce9d9;
+
+    border-top: 4px solid #22a06b;
+}
+
+
+
+/* =========================================================
+   COGNITIVE ANALYSIS
+========================================================= */
+
+.cognitive-analysis-section {
+    margin-top: 10px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+.cognitive-analysis-section h3 {
+    margin-bottom: 18px;
+
+    color: #173b73;
+}
+
+
+.cognitive-analysis-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.cognitive-analysis-card {
+    padding: 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+}
+
+
+.cognitive-analysis-card > span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.cognitive-analysis-card > strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #173b73;
+
+    font-size: 27px;
+}
+
+
+.cognitive-analysis-card small {
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.cognitive-analysis-card p {
+    margin-top: 8px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+
+/* =========================================================
+   MINI ANALYSIS BAR
+========================================================= */
+
+.analysis-mini-bar {
+    width: 100%;
+
+    height: 6px;
+
+    margin-top: 12px;
+
+    overflow: hidden;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+}
+
+
+.analysis-mini-bar div {
+    height: 100%;
+
+    background: #2563eb;
+
+    border-radius: 20px;
+}
+
+
+
+/* =========================================================
+   ANALYSIS STATUS
+========================================================= */
+
+.analysis-strong {
+    color: #18794e;
+}
+
+
+.analysis-good {
+    color: #2563eb;
+}
+
+
+.analysis-review {
+    color: #a16207;
+}
+
+
+.analysis-focus {
+    color: #c43535;
+}
+
+
+
+/* =========================================================
+   WEAK TOPIC SECTION
+========================================================= */
+
+.weak-topic-section {
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+.weak-topic-section h3 {
+    margin-bottom: 15px;
+
+    color: #173b73;
+}
+
+
+.weak-topic-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.weak-topic-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 16px;
+
+    background: #fffafa;
+
+    border: 1px solid #f1d3d3;
+
+    border-radius: 10px;
+}
+
+
+.weak-topic-item h4 {
+    margin-bottom: 3px;
+
+    color: #27364b;
+}
+
+
+.weak-topic-item span {
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+.weak-topic-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-shrink: 0;
+}
+
+
+.weak-topic-actions strong {
+    color: #c43535;
+
+    font-size: 20px;
+}
+
+
+.weak-topic-actions a {
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.weak-topic-actions a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* =========================================================
+   DATA NOTE
+========================================================= */
+
+.analysis-data-note {
+    margin-top: 25px;
+
+    padding-top: 15px;
+
+    border-top: 1px dashed #d1d5db;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .learning-analysis-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cognitive-analysis-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .cognitive-analysis-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .weak-topic-item {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .weak-topic-actions {
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+
+    .analysis-action {
+        width: 100%;
+    }
+
+}
+
+/* =========================================================
+   STEP 10 - ADAPTIVE FOCUS PRACTICE
+========================================================= */
+
+
+/* =========================================================
+   START CARD
+========================================================= */
+
+.focus-start-card {
+    padding: 45px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(15, 35, 70, 0.07);
+
+    text-align: center;
+}
+
+
+.focus-start-icon {
+    margin-bottom: 10px;
+
+    font-size: 55px;
+}
+
+
+.focus-start-card h1 {
+    margin-top: 8px;
+
+    margin-bottom: 12px;
+
+    color: #173b73;
+
+    font-size: 40px;
+}
+
+
+.focus-description {
+    max-width: 650px;
+
+    margin:
+        0
+        auto
+        30px;
+
+    color: #667085;
+}
+
+
+
+/* =========================================================
+   ANALYSIS PREVIEW
+========================================================= */
+
+.focus-analysis-preview {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.focus-analysis-item {
+    padding: 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    text-align: left;
+}
+
+
+.focus-analysis-item span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.focus-analysis-item strong {
+    display: block;
+
+    color: #173b73;
+
+    line-height: 1.4;
+}
+
+
+
+/* =========================================================
+   INFORMATION BOX
+========================================================= */
+
+.focus-info-box {
+    max-width: 750px;
+
+    margin:
+        0
+        auto
+        25px;
+
+    padding: 20px;
+
+    background: #eef5ff;
+
+    border: 1px solid #d6e5ff;
+
+    border-radius: 12px;
+
+    text-align: left;
+}
+
+
+.focus-info-box strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #173b73;
+}
+
+
+.focus-info-box p {
+    color: #53657d;
+
+    font-size: 14px;
+}
+
+
+
+/* =========================================================
+   NO DATA
+========================================================= */
+
+.focus-no-data {
+    max-width: 700px;
+
+    margin:
+        0
+        auto
+        25px;
+
+    padding: 20px;
+
+    background: #fff8e7;
+
+    border: 1px solid #f0d990;
+
+    border-radius: 12px;
+}
+
+
+.focus-no-data strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #8a5c09;
+}
+
+
+.focus-no-data p {
+    margin-bottom: 15px;
+
+    color: #765f32;
+}
+
+
+
+/* =========================================================
+   START ACTIONS
+========================================================= */
+
+.focus-start-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+
+/* =========================================================
+   QUIZ TOP
+========================================================= */
+
+.focus-quiz-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+.focus-mode-label {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+    text-transform: uppercase;
+}
+
+
+#focusQuestionCounter {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+.focus-priority-badge {
+    max-width: 380px;
+
+    padding: 8px 12px;
+
+    background: #fff4f4;
+
+    border: 1px solid #efc9c9;
+
+    border-radius: 20px;
+
+    color: #b73b3b;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+
+/* =========================================================
+   RESULT TOPIC
+========================================================= */
+
+.focus-result-topic {
+    font-size: 14px !important;
+
+    line-height: 1.4;
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .focus-start-card {
+        padding: 25px;
+    }
+
+
+    .focus-start-card h1 {
+        font-size: 32px;
+    }
+
+
+    .focus-analysis-preview {
+        grid-template-columns: 1fr;
+    }
+
+
+    .focus-start-actions {
+        flex-direction: column;
+    }
+
+
+    .focus-start-actions button,
+    .focus-start-actions a {
+        width: 100%;
+    }
+
+
+    .focus-quiz-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .focus-priority-badge {
+        max-width: 100%;
+
+        width: 100%;
+    }
+
+}
+
+.focus-practice-link {
+    margin-top: 10px;
+}
+
+.mode-action-link {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.mode-action-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   STEP 11 - STUDY ASSISTANT
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.assistant-page {
+    min-height: 85vh;
+
+    padding: 65px 0 90px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #eef5ff 0%,
+            #f5f7fb 350px
+        );
+}
+
+
+.assistant-page-header {
+    max-width: 850px;
+
+    margin-bottom: 30px;
+}
+
+
+.assistant-page-header h1 {
+    margin-top: 6px;
+
+    margin-bottom: 10px;
+
+    color: #173b73;
+
+    font-size: 42px;
+}
+
+
+.assistant-page-header p {
+    max-width: 720px;
+
+    color: #667085;
+}
+
+
+.assistant-system-note {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 9px 13px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe4ef;
+
+    border-radius: 8px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+
+/* =========================================================
+   RECOMMENDATION
+========================================================= */
+
+.assistant-recommendation {
+    display: grid;
+
+    grid-template-columns:
+        auto
+        1fr
+        auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe5f3;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15, 35, 70, 0.04);
+}
+
+
+.assistant-recommendation-icon {
+    font-size: 32px;
+}
+
+
+.assistant-recommendation span {
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+    text-transform: uppercase;
+}
+
+
+.assistant-recommendation h2 {
+    margin-top: 3px;
+
+    color: #173b73;
+
+    font-size: 20px;
+}
+
+
+.assistant-recommendation p {
+    margin-top: 5px;
+
+    color: #667085;
+
+    font-size: 13px;
+}
+
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.assistant-layout {
+    display: grid;
+
+    grid-template-columns:
+        300px
+        minmax(0, 1fr);
+
+    gap: 24px;
+
+    align-items: start;
+}
+
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.assistant-sidebar {
+    position: sticky;
+
+    top: 100px;
+}
+
+
+.assistant-sidebar-card {
+    margin-bottom: 18px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+}
+
+
+.assistant-sidebar-card h3 {
+    margin-bottom: 15px;
+
+    color: #173b73;
+
+    font-size: 15px;
+}
+
+
+
+/* =========================================================
+   TOPIC BUTTONS
+========================================================= */
+
+.assistant-topic-buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.assistant-topic-button {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+
+    color: #475569;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    transition:
+        background 0.2s,
+        border-color 0.2s,
+        color 0.2s;
+}
+
+
+.assistant-topic-button:hover {
+    border-color: #a8c2eb;
+
+    color: #173b73;
+}
+
+
+.assistant-topic-button.active {
+    background: #eaf2ff;
+
+    border-color: #7aa5e8;
+
+    color: #174f99;
+}
+
+
+
+/* =========================================================
+   QUICK QUESTIONS
+========================================================= */
+
+.assistant-quick-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.assistant-quick-button {
+    padding: 10px;
+
+    background: transparent;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+
+    color: #475569;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    text-align: left;
+}
+
+
+.assistant-quick-button:hover {
+    background: #eef5ff;
+
+    border-color: #bdd1ef;
+
+    color: #174f99;
+}
+
+
+
+/* =========================================================
+   CHAT PANEL
+========================================================= */
+
+.assistant-chat-panel {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(15, 35, 70, 0.05);
+}
+
+
+.assistant-chat-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px 20px;
+
+    background: #173b73;
+
+    color: #ffffff;
+}
+
+
+.assistant-avatar {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.12
+    );
+
+    border-radius: 50%;
+
+    font-size: 22px;
+}
+
+
+.assistant-chat-header strong {
+    display: block;
+}
+
+
+.assistant-chat-header span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #cbd9eb;
+
+    font-size: 11px;
+}
+
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.assistant-messages {
+    height: 540px;
+
+    overflow-y: auto;
+
+    padding: 24px;
+
+    background: #f8fafc;
+}
+
+
+.assistant-message-row {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+
+.assistant-message-row.user-row {
+    justify-content: flex-end;
+}
+
+
+.assistant-message-avatar {
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf2ff;
+
+    border-radius: 50%;
+
+    font-size: 17px;
+}
+
+
+.assistant-message {
+    max-width: 78%;
+
+    padding: 14px 16px;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.assistant-message-bubble {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    color: #475569;
+
+    border-top-left-radius: 4px;
+}
+
+
+.user-message {
+    background: #173b73;
+
+    color: #ffffff;
+
+    border-bottom-right-radius: 4px;
+}
+
+
+
+/* =========================================================
+   ANSWER CARD
+========================================================= */
+
+.assistant-answer-card {
+    width: 100%;
+
+    max-width: 85%;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e8f0;
+
+    border-top-left-radius: 4px;
+}
+
+
+.assistant-answer-topic {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    padding: 4px 8px;
+
+    background: #eaf2ff;
+
+    border-radius: 20px;
+
+    color: #2563eb;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.assistant-answer-card h3 {
+    margin-bottom: 8px;
+
+    color: #173b73;
+
+    font-size: 17px;
+}
+
+
+.assistant-answer-card > p {
+    color: #4b5563;
+}
+
+
+.assistant-answer-card ul {
+    margin:
+        12px
+        0
+        0
+        20px;
+}
+
+
+.assistant-answer-card li {
+    margin-bottom: 7px;
+
+    color: #4b5563;
+}
+
+
+
+/* =========================================================
+   EXAMPLE
+========================================================= */
+
+.assistant-example-box {
+    margin-top: 15px;
+
+    padding: 13px;
+
+    background: #fffbea;
+
+    border: 1px solid #f4e5a8;
+
+    border-radius: 9px;
+}
+
+
+.assistant-example-box strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #7a6420;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+}
+
+
+.assistant-example-box p {
+    color: #625b42;
+
+    font-size: 13px;
+}
+
+
+
+/* =========================================================
+   ANSWER ACTIONS
+========================================================= */
+
+.assistant-answer-actions {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 15px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+.assistant-small-link {
+    padding: 6px 9px;
+
+    background: #eef5ff;
+
+    border-radius: 6px;
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.assistant-small-link:hover {
+    background: #dceaff;
+}
+
+
+
+/* =========================================================
+   RELATED
+========================================================= */
+
+.assistant-related-box {
+    max-width: 80%;
+
+    margin:
+        -5px
+        0
+        18px
+        44px;
+
+    padding: 12px;
+
+    background: #ffffff;
+
+    border: 1px dashed #cbd5e1;
+
+    border-radius: 10px;
+}
+
+
+.assistant-related-box > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.assistant-related-box button {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 7px 9px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 6px;
+
+    color: #475569;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    text-align: left;
+}
+
+
+.assistant-related-box button:hover {
+    background: #eef5ff;
+
+    color: #174f99;
+}
+
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.assistant-input-area {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto;
+
+    gap: 12px;
+
+    padding: 18px 20px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+.assistant-input-area textarea {
+    width: 100%;
+
+    min-height: 50px;
+    max-height: 120px;
+
+    resize: vertical;
+
+    padding: 12px 14px;
+
+    background: #f8fafc;
+
+    border: 2px solid #e2e8f0;
+
+    border-radius: 9px;
+
+    color: #374151;
+
+    outline: none;
+}
+
+
+.assistant-input-area textarea:focus {
+    border-color: #7aa5e8;
+
+    background: #ffffff;
+}
+
+
+.assistant-input-help {
+    padding:
+        0
+        20px
+        15px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .assistant-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .assistant-sidebar {
+        position: static;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 15px;
+    }
+
+
+    .assistant-sidebar-card {
+        margin-bottom: 0;
+    }
+
+
+    .assistant-recommendation {
+        grid-template-columns:
+            auto
+            1fr;
+    }
+
+
+    .assistant-recommendation > a {
+        grid-column:
+            1
+            /
+            -1;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .assistant-page {
+        padding: 45px 0 70px;
+    }
+
+
+    .assistant-page-header h1 {
+        font-size: 34px;
+    }
+
+
+    .assistant-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+
+    .assistant-recommendation {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+
+    .assistant-recommendation > a {
+        width: 100%;
+    }
+
+
+    .assistant-messages {
+        height: 480px;
+
+        padding: 16px;
+    }
+
+
+    .assistant-message {
+        max-width: 90%;
+    }
+
+
+    .assistant-answer-card {
+        max-width: 90%;
+    }
+
+
+    .assistant-related-box {
+        max-width: calc(100% - 44px);
+    }
+
+
+    .assistant-input-area {
+        grid-template-columns: 1fr;
+    }
+
+
+    .assistant-input-area button {
+        width: 100%;
+    }
+
+}
+
+/* =========================================================
+   STEP 13 - FINAL UI + MOBILE OPTIMIZATION
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL SAFETY
+========================================================= */
+
+body {
+    overflow-x: hidden;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+button,
+a,
+input,
+textarea,
+select {
+    max-width: 100%;
+}
+
+
+.quiz-question,
+.review-question-text,
+.assistant-answer-card,
+.topic-card,
+.analysis-card {
+    overflow-wrap: anywhere;
+}
+
+
+
+/* =========================================================
+   ACTIVE NAV
+========================================================= */
+
+.main-header nav a.active-nav-link {
+    color: #2563eb;
+}
+
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe3ed;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+}
+
+
+.mobile-menu-button span {
+    width: 22px;
+    height: 2px;
+
+    display: block;
+
+    background: #173b73;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.2s,
+        opacity 0.2s;
+}
+
+
+.mobile-menu-button.open span:nth-child(1) {
+    transform:
+        translateY(7px)
+        rotate(45deg);
+}
+
+
+.mobile-menu-button.open span:nth-child(2) {
+    opacity: 0;
+}
+
+
+.mobile-menu-button.open span:nth-child(3) {
+    transform:
+        translateY(-7px)
+        rotate(-45deg);
+}
+
+
+
+/* =========================================================
+   CONNECTION STATUS
+========================================================= */
+
+.connection-status {
+    position: fixed;
+
+    top: 90px;
+    left: 50%;
+
+    z-index: 5000;
+
+    width: calc(100% - 30px);
+    max-width: 620px;
+
+    transform: translateX(-50%);
+
+    padding: 12px 16px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.15);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+.offline-status {
+    background: #fff4df;
+
+    border: 1px solid #e9c674;
+
+    color: #815b08;
+}
+
+
+.online-status {
+    background: #e8f7ef;
+
+    border: 1px solid #a8ddbf;
+
+    color: #18794e;
+}
+
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-to-top {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 4000;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: #173b73;
+
+    border: none;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 10px 25px
+        rgba(23, 59, 115, 0.25);
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+.back-to-top:hover {
+    background: #123466;
+}
+
+
+
+/* =========================================================
+   WEBSITE ERROR MESSAGE
+========================================================= */
+
+.website-error-notice {
+    position: fixed;
+
+    left: 50%;
+    bottom: 20px;
+
+    z-index: 6000;
+
+    width: calc(100% - 30px);
+    max-width: 650px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    transform: translateX(-50%);
+
+    padding: 15px 18px;
+
+    background: #fff4f4;
+
+    border: 1px solid #efb9b9;
+
+    border-left: 5px solid #dc4c4c;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+.website-error-notice strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #a52d2d;
+}
+
+
+.website-error-notice span {
+    color: #6b4b4b;
+
+    font-size: 12px;
+}
+
+
+.website-error-notice button {
+    min-width: 34px;
+    min-height: 34px;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: none;
+
+    color: #a52d2d;
+
+    cursor: pointer;
+
+    font-size: 24px;
+}
+
+
+
+/* =========================================================
+   TOUCH-SCREEN IMPROVEMENT
+========================================================= */
+
+@media (hover: none) {
+
+    .topic-card:hover,
+    .assessment-card:hover,
+    .concept-card:hover,
+    .primary-btn:hover,
+    .secondary-btn:hover,
+    .answer-option:hover {
+
+        transform: none;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 700px) {
+
+
+    .main-header {
+        position: sticky;
+        top: 0;
+    }
+
+
+    .nav-container {
+        position: relative;
+
+        min-height: 68px;
+    }
+
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+
+    /*
+     * Override the older CSS where nav links
+     * were completely hidden on mobile.
+     */
+
+    .main-header nav {
+        position: absolute;
+
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px;
+
+        background: #ffffff;
+
+        border: 1px solid #e5e7eb;
+
+        border-top: none;
+
+        border-radius:
+            0
+            0
+            12px
+            12px;
+
+        box-shadow:
+            0 14px 25px
+            rgba(15, 35, 70, 0.10);
+    }
+
+
+    .main-header nav.mobile-open {
+        display: flex;
+    }
+
+
+    .main-header nav a {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 14px;
+
+        border-radius: 8px;
+
+        font-size: 14px;
+    }
+
+
+    .main-header nav a:hover,
+    .main-header nav a.active-nav-link {
+        background: #eef5ff;
+
+        color: #174f99;
+    }
+
+
+    .assistant-btn {
+        display: none;
+    }
+
+
+    /* GENERAL MOBILE SPACING */
+
+    .topics-section,
+    .modes-section,
+    .progress-section,
+    .assessments-section {
+        padding:
+            55px
+            0;
+    }
+
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+
+    .section-heading h2,
+    .progress-section h2 {
+        font-size: 30px;
+    }
+
+
+    .hero-card {
+        padding: 25px;
+    }
+
+
+    .topic-card,
+    .assessment-card,
+    .mode-card {
+        padding: 22px;
+    }
+
+
+    /* QUIZ ANSWERS */
+
+    .answer-option {
+        align-items: flex-start;
+
+        padding: 14px;
+    }
+
+
+    .option-letter {
+        width: 34px;
+        min-width: 34px;
+        height: 34px;
+    }
+
+
+    /* PREVENT VERY LONG BUTTON TEXT ISSUES */
+
+    .primary-btn,
+    .secondary-btn {
+        white-space: normal;
+
+        text-align: center;
+    }
+
+
+    /* CONNECTION */
+
+    .connection-status {
+        top: 78px;
+    }
+
+
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+
+        width: 42px;
+        height: 42px;
+    }
+
+}
+
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+
+    .container {
+        width: 94%;
+    }
+
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+
+    .topic-hero h1 {
+        font-size: 27px;
+    }
+
+
+    .quiz-header-card h1 {
+        font-size: 27px;
+    }
+
+
+    .quiz-question {
+        font-size: 19px;
+    }
+
+
+    .quiz-card,
+    .quiz-result-card {
+        padding: 18px;
+    }
+
+
+    .assistant-messages {
+        padding: 12px;
+    }
+
+
+    .assistant-message,
+    .assistant-answer-card {
+        max-width: 94%;
+    }
+
+}
+
+/* =========================================================
+   GOVLEARN INSTALL BUTTON
+========================================================= */
+
+#installGovLearnButton {
+    min-width: 175px;
+}
+
+
+.installed-pwa-button {
+    background: #e8f7ef !important;
+
+    border-color: #9fd6b8 !important;
+
+    color: #18794e !important;
+
+    cursor: default !important;
+
+    opacity: 1 !important;
+}
+
+.hidden {
+    display: none !important;
+}
